@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Denver, CO Gutter Guards — Gutter Guard Experts</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+  :root{--ink:#18191C;--navy:#1E2A38;--orange:#F26522;--orange-dark:#D8551A;--cyan:#0077C8;--surface:#F8FAFC;--border:#E2E8F0;--muted:#5B6472;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Manrope',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Space Grotesk',system-ui,sans-serif;margin:0;letter-spacing:-0.02em;color:var(--ink);}
+  p{margin:0;} a{text-decoration:none;color:inherit;} button{font-family:inherit;cursor:pointer;border:none;background:none;padding:0;}
+  ul{margin:0;padding:0;list-style:none;} img{max-width:100%;display:block;}
+  .container{max-width:1280px;margin:0 auto;padding:0 24px;}
+  .section{padding:88px 0;position:relative;z-index:1;}
+  .section-head{max-width:700px;margin:0 auto 48px;text-align:center;}
+  .section-head.left{text-align:left;margin:0 0 40px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;background:rgba(242,101,34,.1);border:1px solid rgba(242,101,34,.3);color:var(--orange-dark);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px;}
+  h1.h-hero{font-size:clamp(32px,4.2vw,48px);line-height:1.12;}
+  h2.h-lg{font-size:clamp(28px,3.6vw,38px);line-height:1.15;}
+  .hero-orange{color:var(--orange);}
+  .lede{font-size:17px;line-height:1.6;color:var(--muted);}
+  .lede-light{font-size:18px;line-height:1.6;color:rgba(255,255,255,.72);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 32px;border-radius:999px;font-weight:700;font-size:16px;transition:all .3s ease;white-space:nowrap;}
+  .btn-sm{padding:11px 22px;font-size:14px;}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(242,101,34,.32);}
+  .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);}
+  .btn-dark{background:var(--navy);color:#fff;}
+  .btn-block{width:100%;}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);margin-bottom:20px;flex-wrap:wrap;}
+  .breadcrumb a{font-weight:700;color:var(--navy);}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:13px;font-weight:700;color:var(--navy);}
+  .badge svg{color:var(--orange);}
+
+  .navbar{position:fixed;top:16px;left:16px;right:16px;z-index:50;max-width:1280px;margin:0 auto;border-radius:999px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border);box-shadow:0 12px 32px rgba(15,23,42,.14);padding:10px 12px 10px 22px;}
+  .navbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .nav-logo-img{height:28px;}
+  .nav-links{display:flex;align-items:center;gap:4px;}
+  .nav-item{position:relative;}
+  .nav-link{display:flex;align-items:center;gap:5px;padding:12px 14px;border-radius:999px;color:var(--ink);font-size:14.5px;font-weight:600;}
+  .nav-link:hover{background:rgba(24,25,28,.06);color:var(--ink);}
+  .nav-item:hover .nav-link svg{transform:rotate(180deg);}
+  .nav-link svg{transition:transform .25s ease;}
+  .mega-panel{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(6px);width:600px;background:#18191C;border:1px solid #2D3748;border-radius:22px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.45);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:60;}
+  .nav-item:hover .mega-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
+  .mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+  .mega-item{display:flex;align-items:flex-start;gap:12px;padding:12px;border-radius:14px;}
+  .mega-item:hover{background:rgba(255,255,255,.06);}
+  .mega-item-icon{width:36px;height:36px;border-radius:10px;background:rgba(242,101,34,.14);color:var(--orange);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .mega-item-icon.cyan{background:rgba(0,119,200,.16);color:#4fb3ec;}
+  .mega-item-title{color:#fff;font-size:14px;font-weight:700;margin-bottom:2px;}
+  .mega-item-desc{color:rgba(255,255,255,.55);font-size:12.5px;line-height:1.4;}
+  .mega-item-pin{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600;}
+  .mega-item-pin:hover{background:rgba(255,255,255,.06);color:#fff;}
+  .mega-item-pin svg{color:var(--orange);}
+  .mega-foot{margin-top:14px;padding-top:14px;border-top:1px solid #2D3748;grid-column:1/-1;}
+  .mega-foot a{color:var(--orange);font-size:13.5px;font-weight:700;}
+  .nav-actions{display:flex;align-items:center;gap:10px;}
+  .nav-phone{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:14.5px;font-weight:700;padding:8px 6px;}
+  .nav-phone svg{color:var(--orange);}
+  .nav-burger{display:none;width:40px;height:40px;border-radius:999px;align-items:center;justify-content:center;color:var(--navy);background:rgba(24,25,28,.06);}
+  .mobile-menu{margin-top:14px;padding:18px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px;}
+  .mobile-link{display:block;padding:14px 8px;color:var(--ink);font-size:16px;font-weight:700;border-bottom:1px solid var(--border);}
+  .mobile-phone{display:flex;align-items:center;gap:10px;padding:16px 8px;color:var(--ink);font-size:17px;font-weight:800;}
+  .mobile-phone svg{color:var(--orange);}
+  .faq-chevron{flex-shrink:0;color:var(--orange);transition:transform .25s ease;}
+  .faq-chevron-open{transform:rotate(180deg);}
+
+  .bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.5;}
+  .bg-shape{position:absolute;opacity:.5;}
+  .bg-shape-1{top:90px;left:-90px;width:360px;} .bg-shape-2{top:38%;right:-120px;width:420px;}
+  .bg-shape-3{bottom:22%;left:-70px;width:320px;} .bg-shape-4{bottom:-60px;right:6%;width:380px;}
+
+  .city-hero{background:var(--navy);padding:168px 0 64px;position:relative;z-index:1;}
+  .anchor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:-120px;position:relative;z-index:2;}
+  .anchor-card{background:#fff;border-radius:20px;padding:32px;box-shadow:0 24px 48px rgba(24,25,28,.14);}
+  .anchor-card h3{font-size:18px;margin-bottom:14px;}
+  .anchor-card ul{display:flex;flex-direction:column;gap:10px;margin-top:14px;}
+  .anchor-card li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);}
+  .anchor-num{width:34px;height:34px;border-radius:10px;background:rgba(242,101,34,.1);color:var(--orange-dark);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;margin-bottom:14px;}
+
+  .carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch;}
+  .carousel::-webkit-scrollbar{height:6px;}
+  .carousel::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px;}
+  .carousel-card{flex:0 0 280px;scroll-snap-align:start;background:#fff;border:1px solid var(--border);border-radius:18px;padding:24px;}
+  .carousel-card .icon-wrap{width:48px;height:48px;border-radius:12px;background:rgba(30,42,56,.07);color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+
+  .roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .roi-col{border-radius:20px;padding:32px;}
+  .roi-col.before{background:var(--surface);border:1px solid var(--border);}
+  .roi-col.after{background:var(--navy);color:#fff;}
+  .roi-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:14.5px;}
+  .roi-col.after .roi-row{border-bottom-color:rgba(255,255,255,.1);}
+  .roi-row:last-child{border-bottom:none;}
+  .roi-val{font-weight:700;}
+
+  .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .benefit-card{text-align:center;padding:24px 12px;}
+  .benefit-card .icon-wrap{width:52px;height:52px;border-radius:14px;background:rgba(242,101,34,.1);color:var(--orange);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+
+  .faq-list{display:flex;flex-direction:column;gap:12px;max-width:800px;margin:0 auto;}
+  .faq-item{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;}
+  .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;text-align:left;}
+  .faq-q span:first-child{font-weight:700;font-size:15.5px;}
+  .faq-a{padding:0 24px 22px;}
+  .faq-a p{color:var(--muted);font-size:14.5px;line-height:1.65;}
+
+  .cta-banner{background:linear-gradient(135deg,var(--navy),#152230);border-radius:32px;padding:56px;text-align:center;}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.7);position:relative;z-index:1;}
+  .footer-top{padding:72px 0 48px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
+  .footer-logo-img{height:26px;margin-bottom:18px;}
+  .footer-col h4{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px;}
+  .footer-col ul{display:flex;flex-direction:column;gap:11px;}
+  .footer-col a{font-size:14px;color:rgba(255,255,255,.62);}
+  .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 0;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.5);}
+  .footer-legal-links{display:flex;gap:20px;}
+
+  @media (max-width:1024px){
+    .nav-links,.nav-actions{display:none;} .nav-burger{display:flex;}
+    .anchor-grid{grid-template-columns:1fr;margin-top:32px;}
+    .roi-grid{grid-template-columns:1fr;}
+    .benefits-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  }
+  @media (max-width:640px){
+    .city-hero{padding:140px 0 48px;} .section{padding:64px 0;}
+    .benefits-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+    .cta-banner{padding:40px 24px;}
+    .carousel-card{flex-basis:240px;}
+    .navbar{left:10px;right:10px;top:10px;}
+  }
+</style>
+</helmet>
+
+<div class="bg-layer" aria-hidden="true">
+  <svg class="bg-shape bg-shape-1" viewBox="0 0 200 140" fill="none" stroke="#1E2A38" stroke-width="1.4"><rect x="10" y="30" width="180" height="70" rx="6"></rect></svg>
+  <svg class="bg-shape bg-shape-2" viewBox="0 0 220 220" fill="none" stroke="#1E2A38" stroke-width="1.4"><path d="M40 20 h100 a10 10 0 0 1 10 10 v18 h-95 a15 15 0 0 0 -15 15 v110" stroke-linecap="round"></path></svg>
+  <svg class="bg-shape bg-shape-3" viewBox="0 0 200 220" fill="none" stroke="#1E2A38" stroke-width="1.4"><path d="M100 20 C 60 80 55 120 100 140 C 145 120 140 80 100 20 Z"></path></svg>
+  <svg class="bg-shape bg-shape-4" viewBox="0 0 180 260" fill="none" stroke="#1E2A38" stroke-width="1.4"><rect x="30" y="0" width="34" height="150" rx="4"></rect></svg>
+</div>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="/" aria-label="Gutter Guard Experts home"><img src="./assets/30e8e468d62cdc737cf482e3bcb2077c.png" alt="Gutter Guard Experts Logo" class="nav-logo-img" width="1923" height="589" style="width: 186px; height: 55px; aspect-ratio: 1923 / 589"></a>
+    <nav class="nav-links">
+      <div class="nav-item">
+        <a href="/services" class="nav-link">Services<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="mega-panel">
+          <div class="mega-grid">
+            <a class="mega-item" href="/services/2-0-pro-installation"><span class="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><span><span class="mega-item-title">2.0 PRO® Guard Installation</span><span class="mega-item-desc">Patented Triple-Rib™ micro-mesh protection</span></span></a>
+            <a class="mega-item" href="/services/gutter-cleaning"><span class="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s5 5.5 5 9.31a5 5 0 0 1-10 0c0-3.81 5-9.31 5-9.31z"></path></svg></span><span><span class="mega-item-title">Gutter Cleaning</span><span class="mega-item-desc">The last cleaning you'll ever need</span></span></a>
+            <a class="mega-item" href="/services/repair-tune-up"><span class="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"></path></svg></span><span><span class="mega-item-title">Repair &amp; Tune-Up</span><span class="mega-item-desc">Hanger, pitch &amp; sealant service</span></span></a>
+            <a class="mega-item" href="/services/seamless-gutters"><span class="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0z"></path></svg></span><span><span class="mega-item-title">Seamless Gutters</span><span class="mega-item-desc">Custom K-style, 30+ colors</span></span></a>
+            <a class="mega-item" href="/services/2-0-pro-heat"><span class="mega-item-icon cyan"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></span><span><span class="mega-item-title">2.0 PRO HEAT™</span><span class="mega-item-desc">Integrated ice-melt for winter</span></span></a>
+            <a class="mega-item" href="/services/commercial"><span class="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"></path></svg></span><span><span class="mega-item-title">Commercial Protection</span><span class="mega-item-desc">Multi-unit &amp; commercial roof lines</span></span></a>
+            <div class="mega-foot"><a href="/services">View all services →</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/service-areas" class="nav-link">Service Areas<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="mega-panel">
+          <div class="mega-grid">
+            <a class="mega-item-pin" href="/service-areas/denver-co"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Denver, CO</a>
+            <a class="mega-item-pin" href="/service-areas/sacramento-ca"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Sacramento, CA</a>
+            <div class="mega-foot"><a href="/service-areas">View all service areas →</a></div>
+          </div>
+        </div>
+      </div>
+      <a href="/why-2-0-pro" class="nav-link">Why 2.0 PRO®</a>
+      <a href="/warranty" class="nav-link">Warranty</a>
+      <a href="/about-us" class="nav-link">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+17207091681" class="nav-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(720) 709-1681</a>
+      <a href="/booking" class="btn btn-primary btn-sm">Get an Estimate</a>
+    </div>
+    <button class="nav-burger" onClick="{{toggleMobileMenu}}" aria-label="Open menu" aria-expanded="{{mobileMenuOpen}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg></button>
+  </div>
+  <sc-if value="{{mobileMenuOpen}}" hint-placeholder-val="{{true}}">
+    <div class="mobile-menu">
+      <a href="/services" class="mobile-link">Services</a>
+      <a href="/service-areas" class="mobile-link">Service Areas</a>
+      <a href="/warranty" class="mobile-link">Warranty</a>
+      <a href="tel:+17207091681" class="mobile-phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(720) 709-1681</a>
+      <a href="/booking" class="btn btn-primary btn-block" style="margin-top:8px;">Get an Estimate</a>
+    </div>
+  </sc-if>
+</header>
+
+<main>
+  <section class="city-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/" style="color:rgba(255,255,255,.6);">Home</a><span style="color:rgba(255,255,255,.4);">/</span><a href="/service-areas" style="color:rgba(255,255,255,.6);">Service Areas</a><span style="color:rgba(255,255,255,.4);">/</span><span style="color:#fff;">Denver, CO</span></div>
+      <div class="eyebrow" style="background:rgba(242,101,34,.16);border-color:rgba(242,101,34,.35);color:#ffb287;">Denver, Colorado</div>
+      <h1 class="h-hero" style="color:#fff;max-width:680px;">Gutter Protection Built for <span class="hero-orange">Denver's Weather</span></h1>
+      <p class="lede-light" style="margin-top:16px;max-width:600px;">From hailstorms to heavy spring snow, Denver homes take a beating. Our local, certified crews install 2.0 PRO® across the metro — from Cherry Creek to Stapleton to the foothills.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;">
+        <a href="/booking" class="btn btn-primary">Get an Estimate</a>
+        <a href="tel:+17207091681" class="btn" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25);">Call (720) 709-1681</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="anchor-grid">
+      <div class="anchor-card">
+        <div class="anchor-num">01</div>
+        <h3>Local Overview &amp; Credentials</h3>
+        <p class="lede" style="font-size:14.5px;">Family-owned since 2012 and headquartered in Denver, our certified installers have serviced the metro area for over a decade.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>Licensed &amp; insured in Colorado</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>Certified 2.0 PRO® technicians</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>Full-service: cleaning, repair, install</li>
+        </ul>
+      </div>
+      <div class="anchor-card">
+        <div class="anchor-num">02</div>
+        <h3>Environment &amp; Specialized Protection</h3>
+        <p class="lede" style="font-size:14.5px;">Denver's hail, heavy spring snow, and foothill pine needles demand a tougher guard than the national average.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>2.0 PRO HEAT™ for ice-dam-prone roofs</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>440-micron mesh stops foothill pine needles</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>Commercial protection for the metro's food-processing, light-industrial &amp; agricultural facilities</li>
+        </ul>
+      </div>
+      <div class="anchor-card">
+        <div class="anchor-num">03</div>
+        <h3>Process, Warranty &amp; Next Step</h3>
+        <p class="lede" style="font-size:14.5px;">Every Denver job follows Clean → Tune-Up → Protect, backed by our Triple-Lifetime Warranty.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>Materials, workmanship &amp; no-clog — all transferable</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg>Free in-home consultation, no obligation</li>
+        </ul>
+        <a href="/booking" class="btn btn-primary btn-block" style="margin-top:18px;">Book Free Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head left">
+        <div class="eyebrow">Denver Install</div>
+        <h2 class="h-lg">What's Included</h2>
+      </div>
+      <div class="carousel">
+        <div class="carousel-card"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s5 5.5 5 9.31a5 5 0 0 1-10 0c0-3.81 5-9.31 5-9.31z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Full Gutter Cleaning</h3><p class="lede" style="font-size:13.5px;">Every job starts with a complete flush of gutters and downspouts.</p></div>
+        <div class="carousel-card"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Hanger &amp; Pitch Tune-Up</h3><p class="lede" style="font-size:13.5px;">Loose hangers re-secured, pitch corrected for proper flow.</p></div>
+        <div class="carousel-card"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">2.0 PRO® Guard Install</h3><p class="lede" style="font-size:13.5px;">Custom-fit T5 aluminum &amp; 440-micron mesh guards.</p></div>
+        <div class="carousel-card"><div class="icon-wrap" style="background:rgba(0,119,200,.1);color:var(--cyan);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Optional 2.0 PRO HEAT™</h3><p class="lede" style="font-size:13.5px;">Ice-melt cable add-on for Denver's freeze-thaw winters.</p></div>
+        <div class="carousel-card"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Warranty Registration</h3><p class="lede" style="font-size:13.5px;">Triple-Lifetime Warranty activated at final walkthrough.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">The Math</div>
+        <h2 class="h-lg">Why It Pays Off in Denver</h2>
+      </div>
+      <div class="roi-grid">
+        <div class="roi-col before">
+          <h3 style="font-size:16px;margin-bottom:16px;color:var(--navy);">Without 2.0 PRO®</h3>
+          <div class="roi-row"><span>Annual ladder cleanings</span><span class="roi-val">2–4 / year</span></div>
+          <div class="roi-row"><span>Avg. cost per cleaning</span><span class="roi-val">$150–$300</span></div>
+          <div class="roi-row"><span>Ice dam / overflow risk</span><span class="roi-val">High</span></div>
+          <div class="roi-row"><span>Foundation &amp; fascia risk</span><span class="roi-val">Ongoing</span></div>
+        </div>
+        <div class="roi-col after">
+          <h3 style="font-size:16px;margin-bottom:16px;color:#fff;">With 2.0 PRO®</h3>
+          <div class="roi-row"><span>Annual ladder cleanings</span><span class="roi-val" style="color:var(--orange);">0</span></div>
+          <div class="roi-row"><span>Warranty callbacks</span><span class="roi-val" style="color:var(--orange);">$0, covered</span></div>
+          <div class="roi-row"><span>Ice dam / overflow risk</span><span class="roi-val" style="color:var(--orange);">Minimized</span></div>
+          <div class="roi-row"><span>Resale value</span><span class="roi-val" style="color:var(--orange);">Transferable warranty</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Key Benefits</div>
+        <h2 class="h-lg">Denver Homeowners Choose 2.0 PRO® For</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card"><div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Hail-Ready Frame</h3><p class="lede" style="font-size:13.5px;">20,000+ PSI T5 aluminum holds up under Front Range hail.</p></div>
+        <div class="benefit-card"><div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Winter-Ready</h3><p class="lede" style="font-size:13.5px;">2.0 PRO HEAT™ keeps meltwater flowing through freeze-thaw cycles.</p></div>
+        <div class="benefit-card"><div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.5 12.9 17 22l-5-3-5 3 1.5-9.1"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Local Warranty Support</h3><p class="lede" style="font-size:13.5px;">A Denver-based team standing behind every Triple-Lifetime claim.</p></div>
+        <div class="benefit-card"><div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:8px;">Commercial-Ready</h3><p class="lede" style="font-size:13.5px;">Scaled protection for Denver-metro commercial &amp; industrial roof lines.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head left">
+        <div class="eyebrow">Choose Your Service</div>
+        <h2 class="h-lg">Denver Services, One Slide Away</h2>
+      </div>
+      <div class="carousel">
+        <a href="/services/2-0-pro-installation" class="carousel-card" style="display:block;"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:6px;">2.0 PRO® Installation</h3><span style="color:var(--orange-dark);font-weight:700;font-size:13px;">Learn more →</span></a>
+        <a href="/services/gutter-cleaning" class="carousel-card" style="display:block;"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s5 5.5 5 9.31a5 5 0 0 1-10 0c0-3.81 5-9.31 5-9.31z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:6px;">Gutter Cleaning</h3><span style="color:var(--orange-dark);font-weight:700;font-size:13px;">Learn more →</span></a>
+        <a href="/services/seamless-gutters" class="carousel-card" style="display:block;"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:6px;">Seamless Gutters</h3><span style="color:var(--orange-dark);font-weight:700;font-size:13px;">Learn more →</span></a>
+        <a href="/services/2-0-pro-heat" class="carousel-card" style="display:block;"><div class="icon-wrap" style="background:rgba(0,119,200,.1);color:var(--cyan);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:6px;">2.0 PRO HEAT™</h3><span style="color:var(--orange-dark);font-weight:700;font-size:13px;">Learn more →</span></a>
+        <a href="/services/commercial" class="carousel-card" style="display:block;"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"></path></svg></div><h3 style="font-size:15.5px;margin-bottom:6px;">Commercial Protection</h3><span style="color:var(--orange-dark);font-weight:700;font-size:13px;">Learn more →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <div class="section-head">
+        <div class="eyebrow">Denver FAQ</div>
+        <h2 class="h-lg">Local Questions, Answered</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onClick="{{toggleFaq0}}" aria-expanded="{{faq0Open}}"><span>Does 2.0 PRO® hold up against Front Range hail?</span><svg class="{{faq0ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          <sc-if value="{{faq0Open}}" hint-placeholder-val="{{true}}"><div class="faq-a"><p>Yes — the T5 aircraft-aluminum frame is rated over 20,000 PSI, well beyond what standard stamped-aluminum guards can withstand during Denver's seasonal hailstorms.</p></div></sc-if>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onClick="{{toggleFaq1}}" aria-expanded="{{faq1Open}}"><span>Do I need 2.0 PRO HEAT™ for a Denver home?</span><svg class="{{faq1ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          <sc-if value="{{faq1Open}}" hint-placeholder-val="{{true}}"><div class="faq-a"><p>It depends on your roofline and past ice-dam history. Homes with north-facing eaves or prior ice-dam damage typically benefit most — your estimator can advise on-site.</p></div></sc-if>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onClick="{{toggleFaq2}}" aria-expanded="{{faq2Open}}"><span>Do you serve commercial &amp; industrial properties in the Denver metro?</span><svg class="{{faq2ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          <sc-if value="{{faq2Open}}" hint-placeholder-val="{{true}}"><div class="faq-a"><p>Yes — our Commercial Protection service covers multi-unit residential, light-industrial, food-processing and agricultural facilities throughout the metro. [CONFIRM CURRENT COMMERCIAL SERVICE RADIUS]</p></div></sc-if>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onClick="{{toggleFaq3}}" aria-expanded="{{faq3Open}}"><span>How fast can a Denver crew get to my home?</span><svg class="{{faq3ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          <sc-if value="{{faq3Open}}" hint-placeholder-val="{{true}}"><div class="faq-a"><p>As a Denver-headquartered team, we typically schedule free in-home estimates within a few business days, with priority scheduling ahead of major storm forecasts.</p></div></sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="h-lg" style="color:#fff;max-width:560px;margin:0 auto;">Get a Free Estimate in Denver</h2>
+        <p class="lede-light" style="margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;">Every visit qualifies you for a $75 Visa gift card, whether or not you move forward.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px;">
+          <a href="/booking" class="btn btn-primary">Get an Estimate</a>
+          <a href="tel:+17207091681" class="btn btn-dark">Call (720) 709-1681</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-top">
+    <div class="footer-grid">
+      <div><img src="./assets/716115a58997adfcd262e0d3fd597482.png" alt="Gutter Guard Experts Logo" class="footer-logo-img"><p style="font-size:14px;line-height:1.6;max-width:280px;color:rgba(255,255,255,.55);">Family-owned since 2012. Patented 2.0 PRO® gutter protection, installed and warrantied for life.</p></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about-us">About Us</a></li><li><a href="/warranty">Warranty</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/services">All Services</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="/service-areas">All Service Areas</a></li></ul></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {{year}} Gutter Guard Experts®. All rights reserved.</span>
+    <div class="footer-legal-links"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms &amp; Conditions</a></div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const mobileMenuOpen = s.mobileMenuOpen ?? false;
+    const openFaqIndex = s.openFaqIndex === undefined ? 0 : s.openFaqIndex;
+    const makeFaqToggle = (i) => () => this.setState({ openFaqIndex: openFaqIndex === i ? -1 : i });
+    const faqFlags = {};
+    for (let i = 0; i < 4; i++) {
+      faqFlags['faq' + i + 'Open'] = openFaqIndex === i;
+      faqFlags['toggleFaq' + i] = makeFaqToggle(i);
+      faqFlags['faq' + i + 'ChevronClass'] = openFaqIndex === i ? 'faq-chevron faq-chevron-open' : 'faq-chevron';
+    }
+    return {
+      mobileMenuOpen,
+      toggleMobileMenu: () => this.setState({ mobileMenuOpen: !mobileMenuOpen }),
+      ...faqFlags,
+      year: new Date().getFullYear(),
+    };
+  }
+}
+</script>
+</body>
+</html>

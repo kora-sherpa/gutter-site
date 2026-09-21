@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Triple-Lifetime Warranty — Gutter Guard Experts</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<script src="../scripts/site-include.js" defer></script>
+</head>
+<body>
+<div id="navbar-root"></div>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+  :root{--ink:#18191C;--navy:#1E2A38;--orange:#F26522;--orange-dark:#D8551A;--cyan:#0077C8;--surface:#F8FAFC;--border:#E2E8F0;--muted:#5B6472;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Manrope',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Space Grotesk',system-ui,sans-serif;margin:0;letter-spacing:-0.02em;color:var(--ink);}
+  p{margin:0;} a{text-decoration:none;color:inherit;} button{font-family:inherit;cursor:pointer;border:none;background:none;padding:0;}
+  ul{margin:0;padding:0;list-style:none;} img{max-width:100%;display:block;}
+  input,textarea,select{font-family:inherit;}
+  .container{max-width:1280px;margin:0 auto;padding:0 24px;}
+  .container-narrow{max-width:760px;margin:0 auto;padding:0 24px;}
+  .section{padding:88px 0;position:relative;z-index:1;}
+  .section-head{max-width:700px;margin:0 auto 48px;text-align:center;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;background:rgba(242,101,34,.1);border:1px solid rgba(242,101,34,.3);color:var(--orange-dark);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px;}
+  h1.h-hero{font-size:clamp(34px,4.4vw,52px);line-height:1.1;}
+  h2.h-lg{font-size:clamp(28px,3.6vw,38px);line-height:1.15;}
+  .hero-orange{color:var(--orange);}
+  .lede{font-size:18px;line-height:1.6;color:var(--muted);}
+  .lede-light{font-size:18px;line-height:1.6;color:rgba(255,255,255,.72);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 32px;border-radius:999px;font-weight:700;font-size:16px;transition:all .3s ease;}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(242,101,34,.32);}
+  .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);}
+  .btn-dark{background:var(--navy);color:#fff;}
+  .btn-sm{padding:11px 22px;font-size:14px;}
+  .btn-block{width:100%;}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);margin-bottom:20px;}
+  .breadcrumb a{font-weight:700;color:var(--navy);}
+  .card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px;}
+
+  .navbar{position:fixed;top:16px;left:16px;right:16px;z-index:50;max-width:1280px;margin:0 auto;border-radius:999px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border:1px solid var(--border);box-shadow:0 12px 32px rgba(15,23,42,.14);padding:10px 12px 10px 22px;}
+  .navbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .nav-logo-img{height:28px;}
+  .nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
+  .nav-link{display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:999px;color:var(--ink);font-size:14px;font-weight:600;white-space:nowrap;}
+  .nav-link:hover{background:rgba(24,25,28,.06);color:var(--ink);}
+  .nav-actions{display:flex;align-items:center;gap:10px;}
+  .nav-phone{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:14.5px;font-weight:700;padding:8px 6px;}
+  .nav-phone svg{color:var(--orange);}
+  .nav-burger{display:none;width:40px;height:40px;border-radius:999px;align-items:center;justify-content:center;color:var(--navy);background:rgba(24,25,28,.06);}
+  .mobile-menu{margin-top:14px;padding:18px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px;}
+  .mobile-link{display:block;padding:14px 8px;color:var(--ink);font-size:16px;font-weight:700;border-bottom:1px solid var(--border);}
+  .mobile-phone{display:flex;align-items:center;gap:10px;padding:16px 8px;color:var(--ink);font-size:17px;font-weight:800;}
+  .mobile-phone svg{color:var(--orange);}
+
+  .bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.5;}
+  .bg-shape{position:absolute;opacity:.5;}
+  .bg-shape-1{top:90px;left:-90px;width:360px;} .bg-shape-2{bottom:-60px;right:6%;width:380px;}
+
+  .warranty-hero{padding:168px 0 64px;background:var(--navy);position:relative;z-index:1;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .icon-wrap{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(242,101,34,.1);color:var(--orange);margin-bottom:20px;}
+  .transfer-strip{display:flex;align-items:center;gap:16px;background:rgba(0,119,200,.08);border:1px solid rgba(0,119,200,.25);border-radius:16px;padding:20px 24px;margin-top:36px;}
+  .transfer-strip svg{color:var(--cyan);flex-shrink:0;}
+
+  .claim-form{background:var(--surface);border-radius:24px;padding:40px;}
+  .form-field{margin-bottom:16px;}
+  .form-field label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .form-field input,.form-field select,.form-field textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px;color:var(--ink);background:#fff;}
+  .form-field textarea{min-height:110px;resize:vertical;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.7);position:relative;z-index:1;}
+  .footer-top{padding:72px 0 48px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
+  .footer-logo-img{height:26px;margin-bottom:18px;}
+  .footer-col h4{color:#ffffff !important;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px;font-family:'Manrope',sans-serif;}
+  .footer-col ul{display:flex;flex-direction:column;gap:11px;}
+  .footer-col a{font-size:14px;color:rgba(255,255,255,.75) !important;transition:color .2s ease;}
+  .footer-col a:hover{color:#fff;}
+  .footer-contact{display:flex;flex-direction:column;gap:10px;margin-top:20px;font-size:14px;}
+  .footer-contact div{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.75);}
+  .footer-contact svg{color:var(--orange);flex-shrink:0;}
+  .credentials-bar{display:flex;flex-wrap:wrap;gap:12px;padding:28px 0;border-top:1px solid rgba(255,255,255,.1);}
+  .credential-chip{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);font-size:12.5px;font-weight:700;color:rgba(255,255,255,.75);}
+  .credential-chip svg{color:var(--cyan);flex-shrink:0;}
+  .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 0;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.5);}
+  .footer-bottom a{color:rgba(255,255,255,.6);}
+  .footer-bottom a:hover{color:#fff;}
+  .footer-legal-links{display:flex;gap:20px;}
+
+  @media (min-width:1025px) and (max-width:1366px){
+    .nav-link{font-size:13px;padding:6px 8px;}
+  }
+  @media (max-width:1024px){
+    .nav-links,.nav-actions{display:none;} .nav-burger{display:flex;}
+    .grid-3{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  }
+  @media (max-width:640px){
+    .warranty-hero{padding:140px 0 48px;} .section{padding:64px 0;}
+    .form-row{grid-template-columns:1fr;}
+    .claim-form{padding:24px;}
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+    .navbar{left:10px;right:10px;top:10px;}
+  }
+</style>
+</helmet>
+
+<div class="bg-layer" aria-hidden="true">
+  <svg class="bg-shape bg-shape-1" viewBox="0 0 200 140" fill="none" stroke="#1E2A38" stroke-width="1.4"><rect x="10" y="30" width="180" height="70" rx="6"></rect></svg>
+  <svg class="bg-shape bg-shape-2" viewBox="0 0 180 260" fill="none" stroke="#1E2A38" stroke-width="1.4"><rect x="30" y="0" width="34" height="150" rx="4"></rect></svg>
+</div>
+
+
+<main>
+  <section class="warranty-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/" style="color:rgba(255,255,255,.6);">Home</a><span style="color:rgba(255,255,255,.4);">/</span><span style="color:#fff;">Warranty</span></div>
+      <div class="eyebrow" style="background:rgba(242,101,34,.16);border-color:rgba(242,101,34,.35);color:#ffb287;">Backed For Life</div>
+      <h1 class="h-hero" style="color:#fff;max-width:680px;">The Triple-Lifetime <span class="hero-orange">Warranty</span></h1>
+      <p class="lede-light" style="margin-top:16px;max-width:600px;">Three separate lifetime guarantees — on materials, on workmanship, and on clogs — all fully transferable if you sell your home.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></div>
+          <h3 style="font-size:19px;margin-bottom:10px;">Lifetime Materials Warranty</h3>
+          <p class="lede" style="font-size:14.5px;">The 2.0 PRO® frame and mesh are covered against manufacturing defects — including rust, corrosion, and UV breakdown — for as long as you own your home.</p>
+        </div>
+        <div class="card">
+          <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></div>
+          <h3 style="font-size:19px;margin-bottom:10px;">Lifetime Workmanship Warranty</h3>
+          <p class="lede" style="font-size:14.5px;">Every installation performed by our certified technicians is covered against defects in the work itself — no fine print, no exceptions for normal use.</p>
+        </div>
+        <div class="card">
+          <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></div>
+          <h3 style="font-size:19px;margin-bottom:10px;">100% Clog-Free Guarantee</h3>
+          <p class="lede" style="font-size:14.5px;">If your gutters ever clog with 2.0 PRO® installed, we send a technician to clear and correct it at no extra cost to you — for life.</p>
+        </div>
+      </div>
+
+      <div class="transfer-strip">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+        <div><strong style="display:block;font-size:15px;color:var(--navy);">Fully Transferable</strong><span class="lede" style="font-size:14px;">All three warranties transfer to the next homeowner at no charge if you sell — a genuine selling point at listing time. This warranty does not void your existing roof manufacturer's warranty.</span></div>
+      </div>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:20px;">This page summarizes warranty coverage. See your official Triple-Lifetime Warranty certificate for complete terms, conditions, exclusions and limitations. [LINK TO FULL WARRANTY PDF]</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Results That Back the Warranty</div>
+        <h2 class="h-lg">Every Install Held to the Same Standard</h2>
+        <p class="lede" style="margin-top:12px;">Our Triple-Lifetime Warranty is only as good as the installation behind it — here's what that standard looks like on real homes.</p>
+      </div>
+      <div class="grid-3" style="grid-template-columns:1fr 1fr;">
+        <div style="border-radius:20px;overflow:hidden;">
+          <img src="./assets/ec00d0196c5012ef9df3f0dd977b19b2.png" alt="Before and after comparison of a roof valley gutter area, showing debris-fouled surface replaced with a clean guard-protected surface" style="width:100%;display:block;">
+        </div>
+        <div style="border-radius:20px;overflow:hidden;">
+          <img src="./assets/060d486abeda8490c98fbe08a78940fd.png" alt="Before and after comparison of a street-facing roofline, old worn gutter guard replaced with a clean new installation" style="width:100%;display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="section-head">
+        <div class="eyebrow">Need to File a Claim?</div>
+        <h2 class="h-lg">Submit a Warranty Claim</h2>
+        <p class="lede" style="margin-top:12px;">Fill out the form below and a warranty specialist will follow up within 1–2 business days.</p>
+      </div>
+      <div class="claim-form">
+        <div class="form-row">
+          <div class="form-field"><label for="w-name">Full Name</label><input id="w-name" type="text" placeholder="Jane Homeowner"></div>
+          <div class="form-field"><label for="w-phone">Phone Number</label><input id="w-phone" type="tel" placeholder="(555) 555-5555"></div>
+        </div>
+        <div class="form-field"><label for="w-email">Email Address</label><input id="w-email" type="text" placeholder="jane@email.com"></div>
+        <div class="form-field"><label for="w-address">Property Address</label><input id="w-address" type="text" placeholder="123 Main St, Denver, CO 80209"></div>
+        <div class="form-row">
+          <div class="form-field"><label for="w-date">Original Install Date</label><input id="w-date" type="text" placeholder="MM/DD/YYYY"></div>
+          <div class="form-field"><label for="w-type">Claim Type</label>
+            <select id="w-type"><option>Materials Defect</option><option>Workmanship Issue</option><option>Clogged Gutter</option><option>Other</option></select>
+          </div>
+        </div>
+        <div class="form-field"><label for="w-desc">Describe the Issue</label><textarea id="w-desc" placeholder="Tell us what's happening and when you first noticed it..."></textarea></div>
+        <button class="btn btn-primary btn-block">Submit Warranty Claim</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+</x-dc>
+<div id="footer-root"></div>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const mobileMenuOpen = s.mobileMenuOpen ?? false;
+    return {
+      mobileMenuOpen,
+      toggleMobileMenu: () => this.setState({ mobileMenuOpen: !mobileMenuOpen }),
+      year: new Date().getFullYear(),
+    };
+  }
+}
+</script>
+</body>
+</html>

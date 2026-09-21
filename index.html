@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gutter Guard Experts — Clog-Free Gutters, Guaranteed</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<script src="scripts/site-include.js" defer></script>
+<script src="scripts/hero-carousel.js" defer></script>
+</head>
+<body>
+<div id="navbar-root"></div>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+  :root{
+    --ink:#18191C;
+    --navy:#1E2A38;
+    --orange:#F26522;
+    --orange-dark:#D8551A;
+    --cyan:#0077C8;
+    --surface:#F8FAFC;
+    --border:#E2E8F0;
+    --muted:#5B6472;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Manrope',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Space Grotesk',system-ui,sans-serif;margin:0;letter-spacing:-0.02em;color:var(--ink);}
+  p{margin:0;}
+  a{text-decoration:none;color:inherit;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;padding:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{max-width:100%;display:block;}
+  input[type="text"],input[type="tel"]{font-family:inherit;}
+
+  .container{max-width:1280px;margin:0 auto;padding:0 24px;}
+  .section{padding:96px 0;position:relative;z-index:1;}
+  .section-tight{padding:72px 0;position:relative;z-index:1;}
+  .section-head{max-width:700px;margin:0 auto 56px;text-align:center;}
+  .section-head.left{margin:0 0 48px;text-align:left;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;background:rgba(242,101,34,.1);border:1px solid rgba(242,101,34,.3);color:var(--orange-dark);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px;}
+  .eyebrow-light{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff;}
+  .eyebrow-cyan{background:rgba(0,119,200,.12);border-color:rgba(0,119,200,.3);color:#dff0fb;}
+  h2.h-lg{font-size:clamp(30px,4vw,44px);line-height:1.12;}
+  h1.h-hero{font-size:clamp(38px,5.2vw,62px);line-height:1.08;}
+  .lede{font-size:18px;line-height:1.6;color:var(--muted);}
+  .lede-light{font-size:18px;line-height:1.6;color:rgba(255,255,255,.72);}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 32px;border-radius:999px;font-weight:700;font-size:16px;transition:all .3s ease;white-space:nowrap;}
+  .btn-sm{padding:11px 22px;font-size:14px;}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(242,101,34,.32);}
+  .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(242,101,34,.4);}
+  .btn-dark{background:var(--navy);color:#fff;}
+  .btn-dark:hover{background:#14202c;transform:translateY(-2px);}
+  .btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28);}
+  .btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55);}
+  .btn-block{width:100%;}
+
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .badge{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);font-size:13px;font-weight:700;color:var(--navy);}
+  .badge svg{color:var(--orange);flex-shrink:0;}
+  .badge-cyan{background:rgba(0,119,200,.08);border-color:rgba(0,119,200,.25);color:#04446f;}
+  .badge-cyan svg{color:var(--cyan);}
+
+  .icon-wrap{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(242,101,34,.1);color:var(--orange);margin-bottom:22px;flex-shrink:0;}
+  .icon-wrap-navy{background:rgba(30,42,56,.07);color:var(--navy);}
+  .icon-wrap-cyan{background:rgba(0,119,200,.1);color:var(--cyan);}
+  .icon-wrap-sm{width:44px;height:44px;border-radius:12px;margin-bottom:0;}
+
+  .card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px;}
+  .card-lift{transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;}
+  .card-lift:hover{transform:translateY(-6px);box-shadow:0 24px 44px rgba(24,25,28,.10);border-color:#d7dee6;}
+
+  .placeholder-media{border:1.5px dashed #cbd5e1;border-radius:20px;background:linear-gradient(145deg,#f4f7fa,#eef2f6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#8592a3;text-align:center;padding:32px;}
+  .placeholder-media span{font-size:13px;font-weight:700;letter-spacing:.02em;}
+
+  /* ---------- Background layer ---------- */
+  .bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.5;}
+  .bg-shape{position:absolute;opacity:.5;}
+  .bg-shape-1{top:90px;left:-90px;width:360px;}
+  .bg-shape-2{top:38%;right:-120px;width:420px;}
+  .bg-shape-3{bottom:22%;left:-70px;width:320px;}
+  .bg-shape-4{bottom:-60px;right:6%;width:380px;}
+
+  /* ---------- Navbar ---------- */
+  .navbar{position:fixed;top:16px;left:16px;right:16px;z-index:50;max-width:1280px;margin:0 auto;border-radius:999px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border);box-shadow:0 12px 32px rgba(15,23,42,.14);padding:10px 12px 10px 22px;}
+  .navbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .nav-logo-img{height:28px;}
+  .nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
+  .nav-item{position:relative;}
+  .nav-link{display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:999px;color:var(--ink);font-size:14px;font-weight:600;white-space:nowrap;transition:background .25s ease,color .25s ease;}
+  .nav-link:hover{background:rgba(24,25,28,.06);color:var(--ink);}
+  .nav-link svg{opacity:.7;transition:transform .25s ease;}
+  .nav-item:hover .nav-link svg{transform:rotate(180deg);}
+
+  .mega-panel{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(6px);width:600px;background:#18191C;border:1px solid #2D3748;border-radius:22px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.45);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease, transform .22s ease, visibility .22s;z-index:60;}
+  .nav-item:hover .mega-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
+  .mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+  .mega-item{display:flex;align-items:flex-start;gap:12px;padding:12px;border-radius:14px;transition:background .2s ease;}
+  .mega-item:hover{background:rgba(255,255,255,.06);}
+  .mega-item-icon{width:36px;height:36px;border-radius:10px;background:rgba(242,101,34,.14);color:var(--orange);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .mega-item-icon.cyan{background:rgba(0,119,200,.16);color:#4fb3ec;}
+  .mega-item-title{color:#fff;font-size:14px;font-weight:700;margin-bottom:2px;}
+  .mega-item-desc{color:rgba(255,255,255,.55);font-size:12.5px;line-height:1.4;}
+  .mega-item-pin{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600;transition:background .2s ease;}
+  .mega-item-pin:hover{background:rgba(255,255,255,.06);color:#fff;}
+  .mega-item-pin svg{color:var(--orange);flex-shrink:0;}
+  .mega-foot{margin-top:14px;padding-top:14px;border-top:1px solid #2D3748;grid-column:1 / -1;}
+  .mega-foot a{color:var(--orange);font-size:13.5px;font-weight:700;display:flex;align-items:center;gap:6px;}
+
+  .nav-actions{display:flex;align-items:center;gap:10px;}
+  .nav-phone{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:14.5px;font-weight:700;padding:8px 6px;}
+  .nav-phone svg{color:var(--orange);}
+  .nav-burger{display:none;width:40px;height:40px;border-radius:999px;align-items:center;justify-content:center;color:var(--navy);background:rgba(24,25,28,.06);flex-shrink:0;}
+
+  .mobile-menu{margin-top:14px;padding:18px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px;}
+  .mobile-link{display:block;padding:14px 8px;color:var(--ink);font-size:16px;font-weight:700;border-bottom:1px solid var(--border);}
+  .mobile-acc{border-bottom:1px solid var(--border);}
+  .mobile-acc-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:14px 8px;color:var(--ink);font-size:16px;font-weight:700;}
+  .mobile-acc-trigger svg{color:rgba(24,25,28,.5);transition:transform .25s ease;}
+  .mobile-acc-panel{padding:4px 8px 16px;display:flex;flex-direction:column;gap:2px;}
+  .mobile-acc-panel a{padding:10px 10px 10px 6px;color:var(--muted);font-size:14.5px;font-weight:600;border-radius:10px;}
+  .mobile-acc-panel a:hover{background:rgba(24,25,28,.05);color:var(--ink);}
+  .mobile-phone{display:flex;align-items:center;gap:10px;padding:16px 8px;color:var(--ink);font-size:17px;font-weight:800;}
+  .mobile-phone svg{color:var(--orange);}
+  .mobile-cta{margin-top:8px;}
+
+  /* ---------- Hero Carousel ---------- */
+  .hero-orange{color:var(--orange);}
+  .hc{position:relative;overflow:hidden;z-index:1;background:var(--navy);min-height:680px;padding:168px 0 96px;display:flex;align-items:center;}
+  .hc-slides{position:absolute;inset:0;z-index:0;}
+  .hc-slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease-in-out;}
+  .hc-slide.is-active{opacity:1;}
+  .hc-slide img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hc-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(30,42,56,.88) 0%,rgba(30,42,56,.58) 45%,rgba(30,42,56,.18) 100%);}
+  .hc-overlay-2{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(24,25,28,.45) 0%,rgba(24,25,28,0) 42%,rgba(24,25,28,.12) 100%);}
+  .hc-glow{position:absolute;left:-90px;top:20%;z-index:1;width:380px;height:380px;border-radius:50%;pointer-events:none;filter:blur(70px);background:radial-gradient(circle, rgba(242,101,34,.35) 0%, rgba(242,101,34,.08) 60%, transparent 100%);}
+  .hc-progress{position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.15);z-index:3;}
+  .hc-progress-bar{height:100%;width:0%;background:var(--orange);}
+  .hc-progress-bar.is-animating{animation:hcLoad 4s linear forwards;}
+  @keyframes hcLoad{from{width:0%;}to{width:100%;}}
+  .hc-content{position:relative;z-index:2;max-width:640px;}
+  .hc-eyebrow-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(24,25,28,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 8px 20px rgba(0,0,0,.2);font-size:13.5px;font-weight:700;color:#fff;margin-bottom:24px;}
+  .hc-star{color:#FACC15;flex-shrink:0;}
+  .hc-dot-sep{color:rgba(255,255,255,.4);}
+  .hc-headline-wrap{opacity:1;}
+  .hc-headline-wrap.hc-rise{animation:hcRise .5s ease;}
+  @keyframes hcRise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+  .hc-sub{font-size:17px;line-height:1.6;color:rgba(255,255,255,.88);max-width:520px;margin-top:16px;}
+  .hc-cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 36px;}
+  .hc-badge-row{display:flex;flex-wrap:wrap;gap:16px 28px;}
+  .hc-badge{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:rgba(255,255,255,.92);white-space:nowrap;}
+  .hc-badge svg{color:var(--orange);flex-shrink:0;}
+  .hc-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
+  .hc-dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.4);border:none;padding:0;cursor:pointer;transition:all .3s ease;}
+  .hc-dot:hover{background:rgba(255,255,255,.7);}
+  .hc-dot.is-active{width:28px;background:var(--orange);}
+
+  /* ---------- Grids ---------- */
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+
+  /* ---------- Comparison ---------- */
+  .cmp-wrap{overflow-x:auto;border-radius:24px;border:1px solid var(--border);}
+  .cmp-table{width:100%;border-collapse:collapse;min-width:820px;background:#fff;}
+  .cmp-table th,.cmp-table td{text-align:left;padding:20px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .cmp-table thead th{background:var(--surface);font-family:'Space Grotesk',sans-serif;font-size:15px;}
+  .cmp-table th.cmp-feature-h{width:22%;color:var(--navy);}
+  .cmp-table th.cmp-win-h{background:var(--navy);color:#fff;width:26%;position:relative;}
+  .cmp-recommend{display:inline-block;background:var(--orange);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:8px;}
+  .cmp-table tbody tr:hover{background:#fbfcfd;}
+  .cmp-table tbody tr:last-child td{border-bottom:none;}
+  .cmp-feature-cell{font-weight:700;color:var(--navy);font-size:14.5px;}
+  .cmp-cell{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;}
+  .cmp-cell strong{display:block;font-size:14px;color:var(--ink);margin-bottom:2px;}
+  .cmp-cell span{color:var(--muted);line-height:1.4;}
+  .cmp-win-cell{background:#fff7f2;}
+  .cmp-icon{flex-shrink:0;margin-top:1px;}
+  .cmp-win .cmp-icon{color:#1c9a5b;}
+  .cmp-lose .cmp-icon{color:#c23a3a;}
+
+  /* ---------- Warranty story ---------- */
+  .warranty-section{background:var(--surface);}
+  .warranty-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;}
+  .warranty-list{display:flex;flex-direction:column;gap:18px;margin:28px 0 32px;}
+  .warranty-list-item{display:flex;gap:14px;align-items:flex-start;}
+  .warranty-list-item .icon-wrap{margin-bottom:0;}
+  .founder-note{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px 22px;margin-top:8px;}
+  .founder-note p{font-size:14px;color:var(--muted);line-height:1.6;}
+
+  /* ---------- Process ---------- */
+  .process-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative;}
+  .process-row::before{content:"";position:absolute;top:38px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,#e2e8f0 0 10px,transparent 10px 20px);z-index:0;}
+  .step-card{position:relative;z-index:1;text-align:center;padding:0 12px;}
+  .step-num{width:76px;height:76px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;margin:0 auto 22px;border:6px solid #fff;box-shadow:0 0 0 2px var(--border);}
+  .step-card:nth-child(3) .step-num{background:var(--orange);}
+
+  /* ---------- Warning signs ---------- */
+  .signs-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;}
+  .warning-item{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border);}
+  .warning-item:last-child{border-bottom:none;}
+  .warning-icon{width:34px;height:34px;border-radius:10px;background:rgba(242,101,34,.1);color:var(--orange-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .urgent-box{background:var(--navy);border-radius:24px;padding:36px;color:#fff;position:sticky;top:150px;}
+  .urgent-box .promo-ribbon{background:rgba(242,101,34,.18);border:1px solid rgba(242,101,34,.35);}
+  .urgent-box .promo-ribbon .promo-ribbon-icon{background:rgba(242,101,34,.28);}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{display:flex;flex-direction:column;gap:12px;max-width:840px;margin:0 auto;}
+  .faq-item{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;}
+  .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;text-align:left;}
+  .faq-q span:first-child{font-weight:700;font-size:15.5px;color:var(--ink);}
+  .faq-chevron{flex-shrink:0;color:var(--orange);transition:transform .25s ease;}
+  .faq-chevron-open{transform:rotate(180deg);}
+  .faq-a{padding:0 24px 22px;}
+  .faq-a p{color:var(--muted);font-size:14.5px;line-height:1.65;}
+
+  /* ---------- Service areas ---------- */
+  .areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .area-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:18px 12px;border:1px solid var(--border);border-radius:14px;font-weight:700;font-size:14.5px;color:var(--navy);transition:all .25s ease;background:#fff;}
+  .area-btn:hover{border-color:var(--orange);color:var(--orange-dark);background:#fff7f2;transform:translateY(-3px);}
+  .area-btn svg{color:var(--orange);flex-shrink:0;}
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner{background:linear-gradient(135deg,var(--navy),#152230);border-radius:32px;padding:64px;position:relative;overflow:hidden;}
+  .cta-banner-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .cta-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .cta-phone-big{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3vw,34px);font-weight:700;color:#fff;display:flex;align-items:center;gap:12px;}
+  .cta-phone-big svg{color:var(--orange);}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:rgba(255,255,255,.7);position:relative;z-index:1;}
+  .footer-top{padding:72px 0 48px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
+  .footer-logo-img{height:26px;margin-bottom:18px;}
+  .footer-col h4{color:#ffffff !important;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px;font-family:'Manrope',sans-serif;}
+  .footer-col ul{display:flex;flex-direction:column;gap:11px;}
+  .footer-col a{font-size:14px;color:rgba(255,255,255,.75) !important;transition:color .2s ease;}
+  .footer-col a:hover{color:#fff;}
+  .footer-contact{display:flex;flex-direction:column;gap:10px;margin-top:20px;font-size:14px;}
+  .footer-contact div{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.75);}
+  .footer-contact svg{color:var(--orange);flex-shrink:0;}
+  .credentials-bar{display:flex;flex-wrap:wrap;gap:12px;padding:28px 0;border-top:1px solid rgba(255,255,255,.1);}
+  .credential-chip{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);font-size:12.5px;font-weight:700;color:rgba(255,255,255,.75);}
+  .credential-chip svg{color:var(--cyan);flex-shrink:0;}
+  .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 0;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.5);}
+  .footer-bottom a{color:rgba(255,255,255,.6);}
+  .footer-bottom a:hover{color:#fff;}
+  .footer-legal-links{display:flex;gap:20px;}
+
+  /* ---------- Responsive ---------- */
+  @media (min-width:1025px) and (max-width:1366px){
+    .nav-link{font-size:13px;padding:6px 8px;}
+  }
+  @media (max-width:1024px){
+    .nav-links,.nav-actions{display:none;}
+    .nav-burger{display:flex;}
+    .hc{min-height:600px;}
+    .grid-4{grid-template-columns:repeat(2,1fr);}
+    .grid-3{grid-template-columns:repeat(2,1fr);}
+    .warranty-grid{grid-template-columns:1fr;gap:40px;}
+    .signs-grid{grid-template-columns:1fr;}
+    .urgent-box{position:static;}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+    .areas-grid{grid-template-columns:repeat(3,1fr);}
+    .cta-banner{padding:48px 32px;}
+  }
+  @media (max-width:640px){
+    .hc{padding:140px 0 64px;min-height:560px;}
+    .section{padding:64px 0;}
+    .grid-4,.grid-3,.grid-2{grid-template-columns:1fr;}
+    .process-row{grid-template-columns:1fr;gap:40px;}
+    .process-row::before{display:none;}
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+    .areas-grid{grid-template-columns:repeat(2,1fr);}
+    .cta-banner-inner{flex-direction:column;align-items:flex-start;}
+    .navbar{left:10px;right:10px;top:10px;}
+  }
+</style>
+</helmet>
+
+<div class="bg-layer" aria-hidden="true">
+  <svg class="bg-shape bg-shape-1" viewBox="0 0 200 140" fill="none" stroke="#1E2A38" stroke-width="1.4">
+    <rect x="10" y="30" width="180" height="70" rx="6"></rect>
+    <path d="M10 45 L50 30 M10 60 L60 30 M10 75 L70 30 M10 90 L80 30 M30 100 L100 30 M50 100 L120 30 M70 100 L140 30 M90 100 L160 30 M110 100 L180 30 M130 100 L190 45 M150 100 L190 65 M170 100 L190 85" stroke-width=".8" opacity=".6"></path>
+    <path d="M30 30 l8 -14 l8 14 M70 30 l8 -14 l8 14 M110 30 l8 -14 l8 14" stroke-width="1.6"></path>
+  </svg>
+  <svg class="bg-shape bg-shape-2" viewBox="0 0 220 220" fill="none" stroke="#1E2A38" stroke-width="1.4">
+    <path d="M40 20 h100 a10 10 0 0 1 10 10 v18 h-95 a15 15 0 0 0 -15 15 v110" stroke-linecap="round"></path>
+    <path d="M40 48 a15 15 0 0 0 -15 15 v110" stroke-linecap="round"></path>
+    <rect x="150" y="20" width="30" height="8"></rect>
+    <path d="M25 130 h-20 v40 h20 z"></path>
+    <path d="M15 130 v-25 l-8 8 M15 105 l8 8"></path>
+  </svg>
+  <svg class="bg-shape bg-shape-3" viewBox="0 0 200 220" fill="none" stroke="#1E2A38" stroke-width="1.4">
+    <path d="M100 20 C 60 80 55 120 100 140 C 145 120 140 80 100 20 Z"></path>
+    <path d="M20 170 q20 -14 40 0 t40 0 t40 0 t40 0" stroke-width="1.2" opacity=".7"></path>
+    <path d="M20 195 q20 -14 40 0 t40 0 t40 0 t40 0" stroke-width="1.2" opacity=".5"></path>
+  </svg>
+  <svg class="bg-shape bg-shape-4" viewBox="0 0 180 260" fill="none" stroke="#1E2A38" stroke-width="1.4">
+    <rect x="30" y="0" width="34" height="150" rx="4"></rect>
+    <path d="M30 150 a34 34 0 0 0 34 34 h30" stroke-linecap="round"></path>
+    <path d="M64 184 l-14 -10 v20 z"></path>
+    <rect x="94" y="176" width="34" height="60" rx="4"></rect>
+  </svg>
+</div>
+
+
+<main>
+
+<!-- ================= 1. HERO CAROUSEL ================= -->
+<section class="hc" id="hero" aria-label="Hero">
+  <div class="hc-slides" id="hc-slides">
+    <div class="hc-slide is-active" data-index="0">
+      <img src="./assets/730c4e1e84772581919d981b0be78070.jpg" alt="A Gutter Guard Experts technician on a ladder installing gutter guard mesh">
+    </div>
+    <div class="hc-slide" data-index="1">
+      <img src="./assets/8c1bf3c83bf617ce0a5e19724663a076.jpg" alt="Close-up of a technician inspecting a gutter bracket and mounting hardware during installation">
+    </div>
+    <div class="hc-slide" data-index="2">
+      <img src="./assets/c5447f9286fa25d88c4567b4382d4a5a.jpg" alt="Pine needles resting harmlessly on top of 2.0 PRO gutter guard mesh instead of clogging the gutter">
+    </div>
+    <div class="hc-slide" data-index="3">
+      <img src="./assets/b6ac7988de6850f6b598a932816b390b.jpg" alt="A man cleaning years of leaves and debris out of an unprotected roof gutter by hand">
+    </div>
+    <div class="hc-overlay"></div>
+    <div class="hc-overlay-2"></div>
+    <div class="hc-glow" aria-hidden="true"></div>
+  </div>
+
+  <div class="hc-progress"><div class="hc-progress-bar is-animating" id="hc-progress-bar"></div></div>
+
+  <div class="container">
+    <div class="hc-content">
+      <div class="hc-eyebrow-pill">
+        <svg class="hc-star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <strong>4.9 stars</strong>
+        <span class="hc-dot-sep">•</span>
+        <span id="hc-eyebrow-text">2.0 PRO® Installation</span>
+      </div>
+
+      <div class="hc-headline-wrap" id="hc-headline-wrap">
+        <h1 class="h-hero" id="hc-headline" style="color:#fff;">The Last Gutter Guard You'll <span class="hero-orange">Ever Need</span></h1>
+        <p class="hc-sub" id="hc-sub">Our patented 2.0 PRO® system blocks pine needles, roof grit and storm debris for good — engineered with an aircraft-grade aluminum frame and 440-micron stainless mesh.</p>
+      </div>
+
+      <div class="hc-cta-row">
+        <a href="/3-step-booking/" class="btn btn-primary">Get an Estimate
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="tel:+17207091681" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call Us Now
+        </a>
+      </div>
+
+      <div class="hc-badge-row">
+        <div class="hc-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5.25 3.4 9.74 8 11 4.6-1.26 8-5.75 8-11V5l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg>Licensed &amp; Insured</div>
+        <div class="hc-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>Free Estimates</div>
+        <div class="hc-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Workmanship Guarantee</div>
+        <div class="hc-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>24/7 Emergency Service</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hc-dots" id="hc-dots">
+    <button class="hc-dot is-active" data-index="0" aria-label="Go to slide 1" type="button"></button>
+    <button class="hc-dot" data-index="1" aria-label="Go to slide 2" type="button"></button>
+    <button class="hc-dot" data-index="2" aria-label="Go to slide 3" type="button"></button>
+    <button class="hc-dot" data-index="3" aria-label="Go to slide 4" type="button"></button>
+  </div>
+</section>
+
+<!-- ================= 2. WHY 2.0 PRO TECHNOLOGY ================= -->
+<section class="section" id="technology">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">The Engineering</div>
+      <h2 class="h-lg">Why 2.0 PRO® Technology Wins</h2>
+      <p class="lede" style="margin-top:16px;">Three years of prototyping, seven design iterations, and one U.S. patent went into a gutter guard built to actually outperform — not just look the part.</p>
+    </div>
+    <div style="border-radius:20px;overflow:hidden;margin-bottom:40px;max-height:420px;">
+      <img src="./assets/639c3c2ee22ac2d3b0d6f4b1a219dd64.jpg" alt="Close-up of 2.0 PRO gutter guard mesh cleanly installed under the shingle edge on a real home" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div class="grid-4">
+      <div class="card card-lift">
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s5 5.5 5 9.31a5 5 0 0 1-10 0c0-3.81 5-9.31 5-9.31z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Patented Triple-Rib™ Water Siphoning</h3>
+        <p class="lede" style="font-size:14.5px;">Three stepped ribs slow rainfall on contact and create capillary action that pulls water down into the gutter — capturing over 40% more water than a flat-mesh guard, even in downpours.</p>
+      </div>
+      <div class="card card-lift">
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Surgical 440-Micron Stainless Mesh</h3>
+        <p class="lede" style="font-size:14.5px;">A woven micro-filter fine enough to stop pine needles, roof grit and wind-blown sand — yet open enough to keep water moving. It won't clog, rust, corrode or break down under UV.</p>
+      </div>
+      <div class="card card-lift">
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Aircraft-Grade T5 Aluminum Frame</h3>
+        <p class="lede" style="font-size:14.5px;">Extruded and tempered to a T5 finish with a tensile strength over 20,000 PSI — up to 10x stronger than the thin stamped aluminum in most gutter guards. It won't warp, bow or separate.</p>
+      </div>
+      <div class="card card-lift">
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Angled Self-Cleaning Pitch</h3>
+        <p class="lede" style="font-size:14.5px;">Installed at nearly the same pitch as your roofline, so leaves and debris slide off in as little as 10–15 mph of wind. Greatly reduced — often eliminated — maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. COMPARISON MATRIX ================= -->
+<section class="section" style="background:var(--surface);" id="compare">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Head-to-Head</div>
+      <h2 class="h-lg">2.0 PRO® vs. LeafFilter vs. LeafGuard</h2>
+      <p class="lede" style="margin-top:16px;">A side-by-side look at how our patented system stacks up against the two most-searched competitors, built from published spec sheets and independent testing.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th class="cmp-feature-h">Feature</th>
+            <th class="cmp-win-h"><span class="cmp-recommend">Recommended</span><br>2.0 PRO®</th>
+            <th>LeafFilter</th>
+            <th>LeafGuard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cmp-feature-cell">Frame Material</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>T5 Aircraft-Grade Aluminum</strong><span>20,000+ PSI tensile strength</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Painted aluminum frame</strong><span>Reports of warping with heat/cold swings</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>One-piece aluminum hood</strong><span>Bulky profile, visible from the ground</span></div></div></td>
+          </tr>
+          <tr>
+            <td class="cmp-feature-cell">Filtration Mesh</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>440-micron surgical steel</strong><span>Blocks pine needles &amp; grit, won't corrode</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Micro-mesh screen</strong><span>Frame/mesh separation reported over time</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Open-hood, no mesh</strong><span>Lets in shingle grit &amp; small debris</span></div></div></td>
+          </tr>
+          <tr>
+            <td class="cmp-feature-cell">Water Siphoning</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>Triple-Rib™ design</strong><span>Captures 40%+ more water via capillary action</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Flat mesh surface</strong><span>Rain can sheet over the edge in storms</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Relies on surface tension</strong><span>Water overshoots in heavy rain</span></div></div></td>
+          </tr>
+          <tr>
+            <td class="cmp-feature-cell">Wind Debris Clearing</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>Self-clears at 10–15 mph</strong><span>Angled pitch sheds debris naturally</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Sits flat in the gutter</strong><span>Acts like a shelf, debris compacts</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Curved hood</strong><span>Wet leaves stick to the surface</span></div></div></td>
+          </tr>
+          <tr>
+            <td class="cmp-feature-cell">Existing Gutter Compatibility</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>New or existing gutters</strong><span>Any roof type, no tear-off required</span></div></div></td>
+            <td><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>Most existing gutters</strong><span>Generally compatible</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Full replacement required</strong><span>Even if current gutters are new</span></div></div></td>
+          </tr>
+          <tr>
+            <td class="cmp-feature-cell">Winter Heating Options</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>2.0 PRO HEAT™ available</strong><span>Integrated ice-melt cable option</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>No heating option</strong><span>Prone to ice dams</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>No heating option</strong><span>Hood traps snow &amp; ice</span></div></div></td>
+          </tr>
+          <tr>
+            <td class="cmp-feature-cell">Warranty Scope</td>
+            <td class="cmp-win-cell"><div class="cmp-cell cmp-win"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></span><div><strong>Triple-Lifetime Warranty</strong><span>Materials + workmanship + no-clog, transferable</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>No-clog warranty only</strong><span>No lifetime materials/workmanship coverage</span></div></div></td>
+            <td><div class="cmp-cell cmp-lose"><span class="cmp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></span><div><strong>Limited lifetime warranty</strong><span>Typically non-transferable</span></div></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:16px;">Comparison based on published manufacturer specifications and installation guides as of 2026. [VERIFY CURRENT COMPETITOR SPECS BEFORE PUBLISHING]</p>
+  </div>
+</section>
+
+<!-- ================= 4. SERVICE DIVISION GRID ================= -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2 class="h-lg">Every Gutter Service, Under One Roof</h2>
+    </div>
+    <div class="grid-3">
+      <a href="/service-detail/" class="card card-lift" style="display:block;">
+        <div class="icon-wrap icon-wrap-navy"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:8px;">2.0 PRO® Guard Installation</h3>
+        <p class="lede" style="font-size:14.5px;">Patented Triple-Rib™ micro-mesh protection installed on new or existing gutters.</p>
+        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--orange-dark);font-weight:700;font-size:13.5px;margin-top:16px;">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+      </a>
+      <a href="/services-hub/" class="card card-lift" style="display:block;">
+        <div class="icon-wrap icon-wrap-navy"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s5 5.5 5 9.31a5 5 0 0 1-10 0c0-3.81 5-9.31 5-9.31z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:8px;">Gutter Cleaning</h3>
+        <p class="lede" style="font-size:14.5px;">A full gutter and downspout flush — the last cleaning you'll ever need once guards go on.</p>
+        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--orange-dark);font-weight:700;font-size:13.5px;margin-top:16px;">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+      </a>
+      <a href="/services-hub/" class="card card-lift" style="display:block;">
+        <div class="icon-wrap icon-wrap-navy"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:8px;">Repair &amp; Tune-Up</h3>
+        <p class="lede" style="font-size:14.5px;">Hanger re-securing, pitch correction and corners sealed with 50-year tri-polymer sealant.</p>
+        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--orange-dark);font-weight:700;font-size:13.5px;margin-top:16px;">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+      </a>
+      <a href="/seamless-gutter/" class="card card-lift" style="display:block;">
+        <div class="icon-wrap icon-wrap-navy"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:8px;">Seamless Gutters</h3>
+        <p class="lede" style="font-size:14.5px;">Custom-fabricated K-style gutters, on-site, in more than 30 colors.</p>
+        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--orange-dark);font-weight:700;font-size:13.5px;margin-top:16px;">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+      </a>
+      <a href="/services-hub/" class="card card-lift" style="display:block;">
+        <div class="icon-wrap icon-wrap-cyan"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:8px;">2.0 PRO HEAT™</h3>
+        <p class="lede" style="font-size:14.5px;">A discreet, integrated ice-melt system that keeps meltwater moving all winter long.</p>
+        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--orange-dark);font-weight:700;font-size:13.5px;margin-top:16px;">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+      </a>
+      <a href="/services-hub/" class="card card-lift" style="display:block;">
+        <div class="icon-wrap icon-wrap-navy"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"></path><path d="M6 12H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2"></path><path d="M18 9h2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-2"></path></svg></div>
+        <h3 style="font-size:18px;margin-bottom:8px;">Commercial Protection</h3>
+        <p class="lede" style="font-size:14.5px;">Guard systems engineered and installed for multi-unit and commercial roof lines.</p>
+        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--orange-dark);font-weight:700;font-size:13.5px;margin-top:16px;">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. WARRANTY STORY ================= -->
+<section class="section warranty-section" id="warranty-story">
+  <div class="container">
+    <div class="warranty-grid">
+      <div style="border-radius:20px;overflow:hidden;aspect-ratio:4/5;">
+        <img src="./assets/eebfe3ea32d811c69e6187528eb5905a.jpg" alt="A family enjoying dinner in their backyard at dusk, protected gutters visible along the roofline" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div>
+        <div class="eyebrow">Backed for Life</div>
+        <h2 class="h-lg">The Triple-Lifetime Warranty Story</h2>
+        <p class="lede" style="margin-top:16px;">Founded in 2012 as a family-owned company, Gutter Guard Experts® spent three years, seven prototypes, and countless hours working with engineers from Colorado to Germany to earn a U.S. patent on the 2.0 PRO® design. That obsession with getting it right is why we back every install with three lifetime guarantees.</p>
+        <div class="warranty-list">
+          <div class="warranty-list-item">
+            <div class="icon-wrap icon-wrap-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Lifetime Materials Warranty</strong><span class="lede" style="font-size:14px;">The guards themselves are covered against defects for as long as you own your home.</span></div>
+          </div>
+          <div class="warranty-list-item">
+            <div class="icon-wrap icon-wrap-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Lifetime Workmanship Warranty</strong><span class="lede" style="font-size:14px;">Every installation is covered against defects in the work itself.</span></div>
+          </div>
+          <div class="warranty-list-item">
+            <div class="icon-wrap icon-wrap-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 17.01"></polyline></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Lifetime No-Clog Guarantee</strong><span class="lede" style="font-size:14px;">If your gutters ever clog with 2.0 PRO® installed, we fix it at no extra cost — period.</span></div>
+          </div>
+        </div>
+        <div class="founder-note">
+          <p>All three warranties are <strong style="color:var(--navy);">fully transferable</strong> to the next homeowner if you sell — and none of it voids your existing roof warranty.</p>
+        </div>
+        <a href="/warranty/" class="btn btn-dark" style="margin-top:28px;">View Full Warranty Terms
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. 3-STEP PROCESS ================= -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How It Works</div>
+      <h2 class="h-lg">Clean. Tune-Up. Protect.</h2>
+      <p class="lede" style="margin-top:16px;">One visit, three steps, and you're done cleaning gutters for good.</p>
+    </div>
+    <div class="process-row">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3 style="font-size:19px;margin-bottom:10px;">Clean</h3>
+        <p class="lede" style="font-size:14.5px;">Every job starts with a full gutter and downspout flush — the last cleaning you'll ever need once 2.0 PRO® is installed.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3 style="font-size:19px;margin-bottom:10px;">Tune-Up</h3>
+        <p class="lede" style="font-size:14.5px;">We re-secure loose hangers, correct pitch for proper flow, and seal every corner and end cap with a 50-year tri-polymer sealant.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3 style="font-size:19px;margin-bottom:10px;">Protect</h3>
+        <p class="lede" style="font-size:14.5px;">Certified technicians install the 2.0 PRO® Gutter Guard system — built, and warrantied, to last a lifetime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. WARNING SIGNS + CONVERSION BOX ================= -->
+<section class="section" style="background:var(--surface);" id="warning-signs">
+  <div class="container">
+    <div class="signs-grid">
+      <div>
+        <div class="eyebrow">Don't Ignore These</div>
+        <h2 class="h-lg">7 Warning Signs Your Gutters Need Attention</h2>
+        <div style="margin-top:8px;">
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Rain overflowing during storms</strong><span class="lede" style="font-size:14px;">Water spilling over the edge instead of into the downspout.</span></div>
+          </div>
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Sagging or pulling-away gutters</strong><span class="lede" style="font-size:14px;">Trapped debris weight is stressing your hangers and fascia.</span></div>
+          </div>
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Foundation cracks or erosion</strong><span class="lede" style="font-size:14px;">Overflow pooling near the foundation instead of routing away.</span></div>
+          </div>
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Icicles and ice dams</strong><span class="lede" style="font-size:14px;">Trapped meltwater refreezing along the roofline in winter.</span></div>
+          </div>
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Wood rot on the fascia</strong><span class="lede" style="font-size:14px;">Standing water breaking down the wood behind your gutters.</span></div>
+          </div>
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Pests and insect nests</strong><span class="lede" style="font-size:14px;">Standing debris attracts mosquitoes, birds and rodents.</span></div>
+          </div>
+          <div class="warning-item">
+            <div class="warning-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <div><strong style="display:block;font-size:15.5px;">Stained or streaked siding</strong><span class="lede" style="font-size:14px;">Water marks beneath the gutter line signal it's overflowing regularly.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="urgent-box">
+        <div class="promo-ribbon">
+          <span class="promo-ribbon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span>
+          <div><strong style="display:block;font-size:15px;">$75 Visa Gift Card</strong><span style="font-size:12.5px;opacity:.85;">With your free in-home estimate</span></div>
+        </div>
+        <h3 style="font-size:24px;color:#fff;margin-bottom:12px;">Don't Wait for the Next Storm</h3>
+        <p class="lede-light" style="margin-bottom:26px;">Every warning sign above gets more expensive the longer it sits. Get a free, no-obligation estimate today and see exactly what it'll take to make gutter problems a thing of the past.</p>
+        <a href="/3-step-booking/" class="btn btn-primary btn-block" style="margin-bottom:12px;">Get My Free Estimate</a>
+        <a href="tel:+17207091681" class="btn btn-outline btn-block">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call (720) 709-1681
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Questions, Answered</div>
+      <h2 class="h-lg">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq0}}" aria-expanded="{{faq0Open}}">
+          <span>Will 2.0 PRO® gutter guards void my roof warranty?</span>
+          <svg class="{{faq0ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq0Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>No. The 2.0 PRO® system attaches to your existing gutters, not your roofline or shingles, so your roof manufacturer's warranty stays fully intact. In most cases, keeping water and ice off your roof edge actually helps your roof last longer.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq1}}" aria-expanded="{{faq1Open}}">
+          <span>How does 2.0 PRO® perform in snow and freezing temperatures?</span>
+          <svg class="{{faq1ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq1Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>The stainless-steel mesh resists ice buildup and the angled pitch sheds snow load naturally. In heavy freeze-thaw climates, we also offer the 2.0 PRO HEAT™ system — a discreet heat-cable add-on that keeps meltwater moving through the guard and gutter instead of forming ice dams.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq2}}" aria-expanded="{{faq2Open}}">
+          <span>Am I really eligible for the $75 Visa gift card?</span>
+          <svg class="{{faq2ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq2Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>Yes. Any homeowner who completes a free, no-obligation in-home estimate qualifies for a $75 Visa gift card, whether or not you move forward with the project. Limit one per household. [CONFIRM CURRENT PROMO TERMS]</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq3}}" aria-expanded="{{faq3Open}}">
+          <span>Do you offer financing?</span>
+          <svg class="{{faq3ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq3Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>Yes. Qualified homeowners can take advantage of 0% financing for up to 18 months, and we regularly run seasonal offers of up to 30–40% off the full project, plus an extra 10% off for military members and homeowners 55 and up.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq4}}" aria-expanded="{{faq4Open}}">
+          <span>Will the guards work with my existing gutters?</span>
+          <svg class="{{faq4ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq4Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>In almost every case, yes. 2.0 PRO® is engineered to install directly onto new or existing gutters and is compatible with virtually any roof type — asphalt shingle, metal, tile or wood shake.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq5}}" aria-expanded="{{faq5Open}}">
+          <span>What exactly does the Triple-Lifetime Warranty cover?</span>
+          <svg class="{{faq5ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq5Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>Three separate lifetime guarantees: materials (the guards won't rust, corrode or break down), workmanship (your installation is covered against defects), and a 100% no-clog guarantee — if your gutters ever clog with our guards installed, we fix it at no extra cost.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq6}}" aria-expanded="{{faq6Open}}">
+          <span>How long does a typical installation take?</span>
+          <svg class="{{faq6ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq6Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>Most homes are completed in a single day. Every job starts with a full gutter and downspout cleaning and a tune-up — re-securing hangers, correcting pitch and sealing corners and end caps — before the 2.0 PRO® guards go on.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq7}}" aria-expanded="{{faq7Open}}">
+          <span>Do the guards actually stop pine needles and roof grit?</span>
+          <svg class="{{faq7ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq7Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>Yes. The 440-micron surgical-grade stainless-steel mesh is fine enough to block pine needles, shingle grit and wind-blown sand, while the patented Triple-Rib™ design keeps water moving through instead of sheeting over the edge.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq8}}" aria-expanded="{{faq8Open}}">
+          <span>Is the warranty transferable if I sell my home?</span>
+          <svg class="{{faq8ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq8Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>Yes — all three parts of the Triple-Lifetime Warranty transfer to the next homeowner at no cost, which is a genuine selling point when you list your home.</p></div>
+        </sc-if>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onClick="{{toggleFaq9}}" aria-expanded="{{faq9Open}}">
+          <span>What areas do you service?</span>
+          <svg class="{{faq9ChevronClass}}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <sc-if value="{{faq9Open}}" hint-placeholder-val="{{true}}">
+          <div class="faq-a"><p>We install and service 2.0 PRO® across Colorado's Front Range — including Denver, Aurora, Lakewood, Arvada, Boulder and Fort Collins — as well as the greater Sacramento region in California, including Roseville, Folsom and Elk Grove.</p></div>
+        </sc-if>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. REGIONAL SERVICE AREAS ================= -->
+<section class="section" style="background:var(--surface);" id="areas">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Where We Work</div>
+      <h2 class="h-lg">Proudly Protecting Homes Across Colorado &amp; California</h2>
+    </div>
+    <div class="areas-grid">
+      <a href="/service-areas/denver-co/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Denver</a>
+      <a href="/service-areas/sacramento-ca/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Sacramento</a>
+      <a href="/service-areas/aurora-co/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Aurora</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Roseville</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Folsom</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Lakewood</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Arvada</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Boulder</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Fort Collins</a>
+      <a href="/service-areas/" class="area-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Elk Grove</a>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="/service-areas/" style="color:var(--orange-dark);font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">View all service areas <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. CTA BANNER ================= -->
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-banner-inner">
+        <div style="max-width:560px;">
+          <div class="cta-badges">
+            <div class="badge badge-cyan"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>2.0 PRO HEAT™ Ready</div>
+            <div class="badge badge-cyan"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>Winter-Proof Guarantee</div>
+          </div>
+          <h2 class="h-lg" style="color:#fff;">Get a Free Estimate Before the Next Storm Hits</h2>
+          <p class="lede-light" style="margin-top:14px;">Join 10,000+ homeowners who stopped cleaning their gutters for good. Estimates are free, and every visit qualifies you for a $75 Visa gift card.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;">
+          <a href="/3-step-booking/" class="btn btn-primary">Get an Estimate</a>
+          <a href="tel:+17207091681" class="cta-phone-big">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            (720) 709-1681
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= 11. FOOTER ================= -->
+
+</x-dc>
+<div id="footer-root"></div>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const mobileMenuOpen = s.mobileMenuOpen ?? false;
+    const mobileServicesOpen = s.mobileServicesOpen ?? false;
+    const mobileAreasOpen = s.mobileAreasOpen ?? false;
+    const openFaqIndex = s.openFaqIndex === undefined ? 0 : s.openFaqIndex;
+
+    const toggleMobileMenu = () => this.setState({
+      mobileMenuOpen: !mobileMenuOpen,
+      mobileServicesOpen: false,
+      mobileAreasOpen: false,
+    });
+    const toggleMobileServices = () => this.setState({ mobileServicesOpen: !mobileServicesOpen });
+    const toggleMobileAreas = () => this.setState({ mobileAreasOpen: !mobileAreasOpen });
+    const makeFaqToggle = (i) => () => this.setState({ openFaqIndex: openFaqIndex === i ? -1 : i });
+
+    const faqFlags = {};
+    for (let i = 0; i < 10; i++) {
+      faqFlags['faq' + i + 'Open'] = openFaqIndex === i;
+      faqFlags['toggleFaq' + i] = makeFaqToggle(i);
+      faqFlags['faq' + i + 'ChevronClass'] = openFaqIndex === i ? 'faq-chevron faq-chevron-open' : 'faq-chevron';
+    }
+
+    return {
+      mobileMenuOpen,
+      mobileServicesOpen,
+      mobileAreasOpen,
+      toggleMobileMenu,
+      toggleMobileServices,
+      toggleMobileAreas,
+      mobileServicesChevronClass: mobileServicesOpen ? 'faq-chevron faq-chevron-open' : 'faq-chevron',
+      mobileAreasChevronClass: mobileAreasOpen ? 'faq-chevron faq-chevron-open' : 'faq-chevron',
+      ...faqFlags,
+      year: new Date().getFullYear(),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "denver-co",
+    "city": "Denver",
+    "stateAbbr": "CO",
+    "state": "Colorado",
+    "climateTag": "Heavy Snow, Hail & Pine Debris",
+    "climateTagLower": "heavy snow, hail, and pine debris",
+    "climateSentence": "Denver's Front Range weather swings from spring hailstorms to heavy winter snowpack, while ponderosa pine and blue spruce trees shed needles onto rooflines year-round.",
+    "risk1": "ice dams that build up along the eaves every winter",
+    "risk2": "hail-driven granule and pine-needle buildup each spring",
+    "risk2Cap": "Hail-driven granule and pine-needle buildup",
+    "risk3": "sudden freeze-thaw cycles that crack gutters already clogged with debris",
+    "neighborhoods": "Cherry Creek, Washington Park, and the Highlands",
+    "heroImage": "730c4e1e84772581919d981b0be78070.jpg",
+    "heroAlt": "A Gutter Guard Experts technician on a ladder installing gutter guard mesh in Denver, CO",
+    "heatRelevance": "Denver's freeze-thaw winters are exactly the pattern that forms ice dams — melted snow refreezing at the eaves overnight. 2.0 PRO HEAT™ is one of our most-requested add-ons here."
+  },
+  {
+    "slug": "sacramento-ca",
+    "city": "Sacramento",
+    "stateAbbr": "CA",
+    "state": "California",
+    "climateTag": "Valley Oak Litter & Atmospheric River Storms",
+    "climateTagLower": "valley oak litter and atmospheric river storms",
+    "climateSentence": "Sacramento's long, dry season bakes valley oak and sycamore leaf litter into a hardened crust, then atmospheric river storms can dump months of rain in a matter of days.",
+    "risk1": "valley oak litter that bakes into a hard crust each dry summer",
+    "risk2": "fine Delta dust and grit packed into open channels",
+    "risk2Cap": "Fine Delta dust and grit",
+    "risk3": "atmospheric river storms that overwhelm clogged systems in a matter of hours",
+    "neighborhoods": "Land Park, East Sacramento, and the Pocket",
+    "heroImage": "b6ac7988de6850f6b598a932816b390b.jpg",
+    "heroAlt": "A man cleaning years of leaves and debris out of an unprotected roof gutter by hand in Sacramento, CA",
+    "heatRelevance": "Sacramento's valley floor rarely sees a hard freeze, so most homes here skip it — but it's available for higher-elevation properties in our Sacramento service area that do see occasional freezing nights."
+  },
+  {
+    "slug": "aurora-co",
+    "city": "Aurora",
+    "stateAbbr": "CO",
+    "state": "Colorado",
+    "climateTag": "Hail Alley Storms & High-Plains Wind Debris",
+    "climateTagLower": "hail alley storms and high-plains wind",
+    "climateSentence": "Aurora sits in the heart of ‘Hail Alley,’ where wind-driven High Plains storms and drifting cottonwood seed overload open gutters every season.",
+    "risk1": "severe hailstorms that dent and clog unprotected gutters each summer",
+    "risk2": "wind-driven cottonwood seed and prairie debris that packs in during dry spells",
+    "risk2Cap": "Wind-driven cottonwood seed and prairie debris",
+    "risk3": "rapid freeze-thaw cycles common to the High Plains that stress waterlogged systems",
+    "neighborhoods": "Southlands, Saddle Rock, and Heather Ridge",
+    "heroImage": "c5447f9286fa25d88c4567b4382d4a5a.jpg",
+    "heroAlt": "Pine needles resting harmlessly on top of 2.0 PRO gutter guard mesh on a home in Aurora, CO",
+    "heatRelevance": "Aurora's High Plains winters bring the same freeze-thaw swings that cause ice dams along the eaves, which is why 2.0 PRO HEAT™ is a popular add-on for Aurora roofs."
+  }
+]

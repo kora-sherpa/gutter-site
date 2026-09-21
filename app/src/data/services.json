@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "2-0-pro-installation",
+    "name": "2.0 PRO® Guard Installation",
+    "tagline": "Patented Triple-Rib™ micro-mesh protection, custom-fit to your gutters",
+    "thumb": "730c4e1e84772581919d981b0be78070.jpg",
+    "thumbAlt": "A Gutter Guard Experts technician on a ladder installing gutter guard mesh",
+    "headerTemplate": "Why {CLIMATE_TAG} Make Gutter Guards Essential in {CITY}, {STATE_ABBR}",
+    "introTemplate": "If you own a home in {CITY}, you already know what {RISK1} does to an unprotected gutter. 2.0 PRO® Guard Installation solves it at the source: a patented Triple-Rib™ micro-mesh, fastened to an aircraft-grade frame, that keeps debris out for good.",
+    "benefits": [
+      "Blocks 440-micron debris — pine needles, roof grit, and shingle particles never make it into the gutter.",
+      "Aircraft-grade T5 aluminum frame holds its shape through {CLIMATE_TAG_LOWER} without warping or sagging.",
+      "Installs directly onto your existing gutters — no tear-off, no reroofing required.",
+      "Backed by a fully transferable Triple-Lifetime Warranty on materials, workmanship, and clog protection."
+    ],
+    "process": [
+      { "title": "Free Inspection", "desc": "We measure your roofline and gutters on-site in {CITY} and confirm your free estimate on the spot." },
+      { "title": "Clean & Tune-Up", "desc": "Full gutter flush, hanger re-securing, and pitch correction before anything is installed." },
+      { "title": "Custom-Fit Install", "desc": "2.0 PRO® guards are cut and fastened to your exact gutter line." },
+      { "title": "Seal & Secure", "desc": "Every corner and end cap sealed with 50-year tri-polymer sealant." }
+    ],
+    "faqGeneric": [
+      { "q": "Will 2.0 PRO® guards work with my existing gutters?", "a": "Yes. The system is designed to fasten directly onto standard 5- and 6-inch K-style gutters, so there's no need to replace your gutters first." },
+      { "q": "How long does installation take?", "a": "Most single-family homes are completed in a single day, start to finish, including the pre-install cleaning and tune-up." }
+    ],
+    "faqCityQ": "Does 2.0 PRO® hold up to {CITY}'s {CLIMATE_TAG}?",
+    "faqCityA": "Yes — the T5 aluminum frame and 440-micron mesh are built for {RISK1}, and every install is backed by a fully transferable Triple-Lifetime Warranty."
+  },
+  {
+    "slug": "gutter-cleaning",
+    "name": "Gutter Cleaning",
+    "tagline": "The last hand-cleaning you'll ever need to schedule",
+    "thumb": "b6ac7988de6850f6b598a932816b390b.jpg",
+    "thumbAlt": "A man cleaning years of leaves and debris out of an unprotected roof gutter by hand",
+    "headerTemplate": "Why {CITY} Homes Need Professional Gutter Cleaning Before {CLIMATE_TAG}",
+    "introTemplate": "In {CITY}, {RISK1} fills an open gutter faster than most homeowners expect. Our gutter cleaning service clears every run by hand, tests the downspouts, and leaves you with a clean baseline before we ever talk about guards.",
+    "benefits": [
+      "Full hand-cleaning of leaves, grit, and standing debris from every gutter run and downspout.",
+      "Downspout flow test to confirm water is actually leaving the roofline, not backing up behind {CLIMATE_TAG_LOWER}.",
+      "Minor hanger re-securing and pitch check included at no extra charge.",
+      "Photo before/after report so you can see exactly what came out of your gutters."
+    ],
+    "process": [
+      { "title": "Schedule Visit", "desc": "Pick a time that works — most {CITY} appointments are booked within the week." },
+      { "title": "Full Gutter Flush", "desc": "Every run is hand-cleared of leaves, grit, and standing debris, not just blown out." },
+      { "title": "Hanger & Pitch Check", "desc": "Loose hangers are re-secured and pitch is checked so water actually reaches the downspout." },
+      { "title": "Downspout Flow Test", "desc": "We run water through the system before we leave to confirm it drains clean." }
+    ],
+    "faqGeneric": [
+      { "q": "How often should I have my gutters cleaned?", "a": "Most homes need cleaning twice a year — once in late spring and once in late fall — though heavy tree cover can mean more often." },
+      { "q": "Do you clean gutters that already have guards installed?", "a": "Yes. Guarded systems still benefit from an occasional flush, and we can inspect the guards for damage while we're up there." }
+    ],
+    "faqCityQ": "Why do {CITY} gutters clog so fast?",
+    "faqCityA": "{RISK1} and {RISK2} combine fast here — that pairing is what turns an open gutter into a clogged one within a single season."
+  },
+  {
+    "slug": "repair-tune-up",
+    "name": "Repair & Tune-Up",
+    "tagline": "Reseal, re-secure, and re-pitch before small problems become fascia rot",
+    "thumb": "ec00d0196c5012ef9df3f0dd977b19b2.png",
+    "thumbAlt": "Before and after comparison of a roof valley gutter area, showing debris-fouled surface replaced with a clean guard-protected surface",
+    "headerTemplate": "When {CITY} Gutters Need Repair, Not Replacement — Signs to Watch For",
+    "introTemplate": "{CLIMATE_SENTENCE} In {CITY}, that usually shows up as sagging hangers, leaking seams, or gutters that no longer drain toward the downspout. A repair and tune-up fixes the specific problem instead of replacing gutters that still have years of life left in them.",
+    "benefits": [
+      "Reseal leaking seams and end caps with 50-year tri-polymer sealant.",
+      "Re-secure sagging hangers and brackets loosened by {CLIMATE_TAG_LOWER}.",
+      "Correct negative pitch so water reaches the downspout instead of pooling.",
+      "Spot-repair damaged sections without a full gutter replacement."
+    ],
+    "process": [
+      { "title": "Diagnostic Inspection", "desc": "We walk the roofline in {CITY} and identify every leak, sag, and pitch issue." },
+      { "title": "Hanger & Bracket Repair", "desc": "Loose or failed hangers are replaced and re-secured to the fascia." },
+      { "title": "Pitch Correction", "desc": "Gutters are re-leveled so water flows to the downspout instead of standing." },
+      { "title": "Seal & Test", "desc": "Seams and end caps are resealed, then tested with running water before we leave." }
+    ],
+    "faqGeneric": [
+      { "q": "How do I know if my gutters need repair instead of full replacement?", "a": "If the gutter material itself is still sound — no rust-through or cracked runs — a repair and tune-up is almost always faster and less expensive than a full replacement." },
+      { "q": "Can you repair gutters that weren't originally installed by your team?", "a": "Yes. We service and repair most standard aluminum and steel gutter systems, regardless of who installed them." }
+    ],
+    "faqCityQ": "What's the most common gutter problem you see in {CITY}?",
+    "faqCityA": "{RISK2_CAP} is the biggest culprit — it works hangers loose and pulls seams apart faster than most homeowners expect."
+  },
+  {
+    "slug": "seamless-gutters",
+    "name": "Seamless Gutters",
+    "tagline": "Custom K-style gutters, roll-formed on-site to your exact roofline",
+    "thumb": "ae395ef07fa5fe74ebb6b7c028460d8a.png",
+    "thumbAlt": "Technician measuring a section of seamless gutter with a tape measure before installation",
+    "headerTemplate": "Why {CITY} Homes Are Switching to Seamless Gutters",
+    "introTemplate": "Sectional gutters give {RISK1} a seam to work loose. Seamless gutters remove that weak point entirely — each run is roll-formed on-site to your exact roofline, in a color matched to your trim or siding, with no seams for {CITY}'s weather to exploit.",
+    "benefits": [
+      "Formed on-site in one continuous run — no seams for {CLIMATE_TAG_LOWER} to work loose over time.",
+      "Matched to your trim, roofline, or siding, including specialty metals and 30+ colors.",
+      "Heavier-gauge aluminum resists denting and sagging better than sectional gutters.",
+      "Ready to pair with 2.0 PRO® guards for a fully protected, guard-topped system."
+    ],
+    "process": [
+      { "title": "Measure & Match Color", "desc": "We measure your exact roofline in {CITY} and match trim or siding color on-site." },
+      { "title": "On-Site Roll-Forming", "desc": "Gutter stock is roll-formed into one seamless run right at your home." },
+      { "title": "Install & Level", "desc": "Sections are hung, leveled, and pitched to the downspout in a single day." },
+      { "title": "Guard-Ready Finish", "desc": "Every run is finished ready to accept 2.0 PRO® guards if you add them later." }
+    ],
+    "faqGeneric": [
+      { "q": "Are seamless gutters actually seamless?", "a": "Each run is roll-formed on-site as one continuous piece, so the only seams are at inside/outside corners and downspout connections." },
+      { "q": "What colors are available?", "a": "We stock 30+ factory finishes and can match most trim and siding colors, including specialty metals like copper and zinc." }
+    ],
+    "faqCityQ": "Do seamless gutters help with {CITY}'s {CLIMATE_TAG}?",
+    "faqCityA": "Yes — fewer seams mean fewer places for {RISK1} to force a leak, which is exactly where sectional gutters tend to fail first."
+  },
+  {
+    "slug": "2-0-pro-heat",
+    "name": "2.0 PRO HEAT™",
+    "tagline": "Integrated ice-melt cable built into the guard system",
+    "thumb": "c5447f9286fa25d88c4567b4382d4a5a.jpg",
+    "thumbAlt": "Pine needles resting harmlessly on top of 2.0 PRO gutter guard mesh instead of clogging the gutter",
+    "headerTemplate": "Do {CITY} Roofs Need Ice-Dam Protection? Here's How 2.0 PRO HEAT™ Helps",
+    "introTemplate": "{HEAT_RELEVANCE} 2.0 PRO HEAT™ integrates a self-regulating heat cable directly into the 2.0 PRO® guard system, so meltwater keeps moving through the downspout instead of refreezing at the eaves.",
+    "benefits": [
+      "Self-regulating heat cable is integrated directly into the 2.0 PRO® guard, not just draped over the gutter.",
+      "Keeps meltwater moving through the downspout instead of refreezing into ice dams.",
+      "Controlled by a weather-sensing thermostat, so it only runs when conditions call for it.",
+      "Layers onto any 2.0 PRO® installation without changing the look of your roofline."
+    ],
+    "process": [
+      { "title": "Ice-Dam Risk Assessment", "desc": "We walk the roofline in {CITY} and flag the valleys and eaves most prone to ice buildup." },
+      { "title": "Cable Routing", "desc": "Self-regulating heat cable is routed along the guard and into vulnerable valleys and downspouts." },
+      { "title": "Thermostat Setup", "desc": "A weather-sensing controller is wired in so the system runs only when temperature and moisture call for it." },
+      { "title": "Test & Handoff", "desc": "We test the full circuit before we leave and walk you through the controls." }
+    ],
+    "faqGeneric": [
+      { "q": "Does 2.0 PRO HEAT™ run all winter?", "a": "No. The thermostat only activates the cable when temperature and moisture conditions actually risk ice formation, which keeps energy use down." },
+      { "q": "Can it be added to guards I already have installed?", "a": "In most cases, yes — we can retrofit heat cable onto an existing 2.0 PRO® installation without replacing the guards themselves." }
+    ],
+    "faqCityQ": "Do I really need ice-melt protection in {CITY}?",
+    "faqCityA": "It depends on your roofline's specific ice-dam history. Book a free inspection and we'll give you a straight answer for your home, not a blanket sales pitch."
+  },
+  {
+    "slug": "commercial",
+    "name": "Commercial Protection",
+    "tagline": "Multi-unit and commercial-grade gutter protection with minimal downtime",
+    "thumb": "37f592363d1f32953f39d47a78c1cbc8.png",
+    "thumbAlt": "Certified Gutter Guard Experts technician installing a copper downspout, wearing a branded company shirt",
+    "headerTemplate": "Commercial & Multi-Unit Gutter Protection Built for {CITY} Properties",
+    "introTemplate": "Larger roof systems catch more debris, and in {CITY} that means {RISK2}. Our commercial division fabricates heavier-gauge guards and gutter stock sized for multi-unit buildings, HOA common areas, and low-slope commercial roof lines — with phased scheduling that keeps tenants undisturbed.",
+    "benefits": [
+      "Custom-fabricated for low-slope commercial roof lines, multi-unit buildings, and HOA common areas.",
+      "Phased installation scheduling keeps tenants and foot traffic largely undisturbed.",
+      "Heavier-gauge materials built for the debris load {CLIMATE_TAG_LOWER} puts on larger roof systems.",
+      "One ongoing maintenance plan covers every building on the property."
+    ],
+    "process": [
+      { "title": "Site Walkthrough & Assessment", "desc": "We assess every roofline on the {CITY} property and scope material needs building-by-building." },
+      { "title": "Custom Commercial-Grade Fabrication", "desc": "Guards and gutter stock are fabricated to match your specific roof and drainage system." },
+      { "title": "Phased Installation", "desc": "Work is scheduled building-by-building to minimize downtime for tenants and property staff." },
+      { "title": "Ongoing Maintenance Plan", "desc": "A single scheduled maintenance plan keeps every building on the property covered." }
+    ],
+    "faqGeneric": [
+      { "q": "Do you work with property managers and HOAs directly?", "a": "Yes. We regularly coordinate directly with property managers and HOA boards on scheduling, billing, and multi-building scopes of work." },
+      { "q": "Can you handle multiple buildings on one property?", "a": "Yes — we scope and phase installs across an entire property so every building is covered under one plan and one warranty." }
+    ],
+    "faqCityQ": "What makes commercial gutter protection different in {CITY}?",
+    "faqCityA": "Larger roof systems catch more {RISK2}, so we fabricate heavier-gauge guards and gutter stock sized for the debris load {CITY} commercial roofs actually see."
+  }
+]

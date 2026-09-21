@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import ServicesHub from "./pages/ServicesHub.jsx";
 import ServiceAreas from "./pages/ServiceAreas.jsx";
 import LocationDetail from "./pages/LocationDetail.jsx";
+import ServiceDetail from "./pages/ServiceDetail.jsx";
 import Warranty from "./pages/Warranty.jsx";
 import Why2Pro from "./pages/Why2Pro.jsx";
 import Booking from "./pages/Booking.jsx";
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/service-areas" element={<ServiceAreas />} />
         <Route path="/service-areas/:locationId" element={<LocationDetail />} />
         <Route path="/service-areas/:locationId/:serviceId" element={<LocationDetail />} />
+        <Route path="/services/:serviceId" element={<ServiceDetail />} />
         <Route path="/warranty" element={<Warranty />} />
         <Route path="/why-2-pro" element={<Why2Pro />} />
         <Route path="/booking" element={<Booking />} />

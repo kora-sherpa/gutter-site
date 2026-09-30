@@ -1,35 +1,24 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Shield, Sparkles, Flame, Building2, Phone, ImageOff } from "lucide-react";
+import { Phone } from "lucide-react";
+import ImageLightbox from "../components/ImageLightbox.jsx";
 
-const TABS = [
-  { id: "all", label: "All" },
-  { id: "pro", label: "2.0 PRO®" },
-  { id: "seamless", label: "Seamless Gutters" },
-  { id: "heated", label: "Heated Systems" },
-  { id: "commercial", label: "Commercial" },
-];
-
-const CATEGORY_ICON = { pro: Shield, seamless: Sparkles, heated: Flame, commercial: Building2 };
-
-const ITEMS = [
-  { cat: "pro", tag: "2.0 PRO®", h: 260, caption: "Fresh 2.0 PRO® install — Denver, CO" },
-  { cat: "seamless", tag: "Seamless", h: 200, caption: "Weathered Copper seamless run — Boulder, CO" },
-  { cat: "pro", tag: "2.0 PRO®", h: 320, caption: "Close-up of 440-micron mesh — Fort Collins, CO" },
-  { cat: "commercial", tag: "Commercial", h: 230, caption: "Multi-unit commercial roof line — Aurora, CO" },
-  { cat: "heated", tag: "Heated", h: 280, caption: "2.0 PRO HEAT™ cable install — Lakewood, CO" },
-  { cat: "pro", tag: "2.0 PRO®", h: 210, caption: "Before & after — Sacramento, CA" },
-  { cat: "seamless", tag: "Seamless", h: 300, caption: "Storm Gray K-style install — Roseville, CA" },
-  { cat: "commercial", tag: "Commercial", h: 190, caption: "Food-processing facility guard install — Denver, CO" },
-  { cat: "pro", tag: "2.0 PRO®", h: 250, caption: "Certified technician on-site — Arvada, CO" },
-  { cat: "heated", tag: "Heated", h: 230, caption: "Ice-dam prevention in action — Fort Collins, CO" },
-  { cat: "seamless", tag: "Seamless", h: 270, caption: "Custom fabrication on-site — Folsom, CA" },
-  { cat: "commercial", tag: "Commercial", h: 220, caption: "Agricultural facility protection — Greeley, CO" },
-];
+const BEFORE_AFTER_IMAGES = [1, 2, 3, 4, 5, 6].map((n) => `/before-and-after/${n}.avif`);
 
 export default function Gallery() {
-  const [filter, setFilter] = useState("all");
-  const visible = filter === "all" ? ITEMS : ITEMS.filter((i) => i.cat === filter);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
+  function openAt(i) {
+    setLightboxIndex(i);
+  }
+
+  function closeLightbox() {
+    setLightboxIndex(null);
+  }
+
+  function navigate(delta) {
+    setLightboxIndex((current) => (current + delta + BEFORE_AFTER_IMAGES.length) % BEFORE_AFTER_IMAGES.length);
+  }
 
   return (
     <main>
@@ -54,37 +43,32 @@ export default function Gallery() {
       </section>
 
       <section className="mx-auto max-w-[1280px] px-6 pb-20">
-        <div className="mb-8 flex flex-wrap gap-2">
-          {TABS.map((tab) => (
+        <div className="mx-auto mb-12 max-w-xl text-center">
+          <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
+            Real Results
+          </div>
+          <h2 className="text-[28px] font-bold sm:text-[36px]">Before &amp; After</h2>
+          <p className="mt-3.5 text-lg text-muted">The same roofline, transformed by a single visit from our crew. Click any photo to browse the full set.</p>
+        </div>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {BEFORE_AFTER_IMAGES.map((src, i) => (
             <button
-              key={tab.id}
+              key={src}
               type="button"
-              onClick={() => setFilter(tab.id)}
-              className={`rounded-pill border px-4 py-2 text-[13.5px] font-bold transition ${
-                filter === tab.id ? "border-orange bg-orange text-white" : "border-border text-navy hover:border-orange/40"
-              }`}
+              onClick={() => openAt(i)}
+              aria-label={`Open before and after photo ${i + 1} of ${BEFORE_AFTER_IMAGES.length}`}
+              className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             >
-              {tab.label}
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={src}
+                  alt={`Before and after gutter guard installation, example ${i + 1}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                />
+              </div>
             </button>
           ))}
-        </div>
-
-        <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-          {visible.map((item, i) => {
-            const Icon = CATEGORY_ICON[item.cat] || ImageOff;
-            return (
-              <div key={`${item.cat}-${i}`} className="mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-white">
-                <div className="relative flex items-center justify-center gap-2 bg-surface text-muted" style={{ height: item.h }}>
-                  <span className="absolute left-3 top-3 rounded-pill bg-ink/80 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
-                    {item.tag}
-                  </span>
-                  <Icon className="h-8 w-8 opacity-50" />
-                  <span className="text-xs font-bold uppercase tracking-wide opacity-60">Photo</span>
-                </div>
-                <p className="p-4 text-[13.5px] font-semibold text-navy">{item.caption}</p>
-              </div>
-            );
-          })}
         </div>
       </section>
 
@@ -102,6 +86,8 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+      <ImageLightbox images={BEFORE_AFTER_IMAGES} index={lightboxIndex} onClose={closeLightbox} onNavigate={navigate} />
     </main>
   );
 }

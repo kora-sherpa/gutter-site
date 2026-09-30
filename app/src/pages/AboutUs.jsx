@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
+import VideoFeature from "../components/VideoFeature.jsx";
 
 const STATS = [
   { num: "2012", copy: "Founded — family-owned and operated from day one" },
@@ -82,6 +83,25 @@ export default function AboutUs() {
       </section>
 
       <section className="mx-auto max-w-[1280px] px-6 py-20">
+        <div className="mx-auto mb-10 max-w-xl text-center">
+          <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
+            Meet the Team
+          </div>
+          <h2 className="text-[28px] font-bold sm:text-[36px]">The Faces Behind Every Installation</h2>
+          <p className="mt-3.5 text-lg text-muted">
+            A local, certified crew — not a rotating cast of subcontractors.
+          </p>
+        </div>
+        <div className="overflow-hidden rounded-3xl bg-surface">
+          <img
+            src="/team-photos.jpg"
+            alt="The Gutter Guard Experts team"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_1.5fr]">
           <div className="overflow-hidden rounded-2xl bg-surface" style={{ aspectRatio: "3 / 4" }}>
             <img
@@ -108,6 +128,14 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      <VideoFeature
+        eyebrow="Behind the Install"
+        title="Watch a Real 2.0 PRO® Installation, Start to Finish"
+        subtitle="From the pre-install cleaning and tune-up to the final custom-fit guard, here's exactly what our certified crew does on-site — no shortcuts, no subcontractors."
+        videoSrc="https://video.wixstatic.com/video/680062_6f9c7970639948988ecfef4af012438a/1080p/mp4/file.mp4"
+        reverse
+      />
 
       <section className="mx-auto max-w-[1280px] px-6 pb-20">
         <div className="rounded-[32px] bg-gradient-to-br from-navy to-[#152230] px-8 py-14 text-center">

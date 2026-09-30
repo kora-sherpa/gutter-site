@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { Star, ArrowRight, Phone, ShieldCheck, CheckCircle2, Clock, Zap } from "lucide-react";
 
 const ROTATE_MS = 4000;
@@ -51,6 +51,11 @@ export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
+  const sectionRef = useRef(null);
+  const shouldReduceMotion = useReducedMotion();
+
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const blobY = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : 120]);
 
   useEffect(() => {
     if (paused) return undefined;
@@ -64,6 +69,7 @@ export default function HeroCarousel() {
 
   return (
     <section
+      ref={sectionRef}
       className="relative flex min-h-[560px] items-center overflow-hidden bg-navy pb-24 pt-[168px] sm:min-h-[680px] sm:pt-[168px]"
       aria-label="Hero"
       onMouseEnter={() => setPaused(true)}
@@ -84,7 +90,10 @@ export default function HeroCarousel() {
         </AnimatePresence>
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-ink/10" />
-        <div className="pointer-events-none absolute -left-24 top-[20%] h-[380px] w-[380px] rounded-full bg-orange/30 blur-[70px]" />
+        <motion.div
+          style={{ y: blobY }}
+          className="pointer-events-none absolute -left-24 top-[20%] h-[380px] w-[380px] rounded-full bg-orange/30 blur-[70px] animate-pulse-soft"
+        />
       </div>
 
       <div className="absolute inset-x-0 top-0 z-10 h-[3px] bg-white/15">

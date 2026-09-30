@@ -1,5 +1,7 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import ScrollProgressBar from "./components/ScrollProgressBar.jsx";
 import FloatingNav from "./components/FloatingNav.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
@@ -31,34 +33,65 @@ function TrailingSlashOrNotFound() {
 }
 
 export default function App() {
+  const location = useLocation();
+  const shouldReduceMotion = useReducedMotion();
+
+  const page = (
+    <Routes location={location}>
+      <Route path="/" element={<Home />} />
+      <Route path="/services-hub" element={<ServicesHub />} />
+      <Route path="/service-areas" element={<ServiceAreas />} />
+      <Route path="/service-areas/:locationId" element={<LocationDetail />} />
+      <Route path="/service-areas/:locationId/:serviceId" element={<LocationDetail />} />
+      <Route path="/services/:serviceId" element={<ServiceDetail />} />
+
+      {/* Clean top-level pages for each service (distinct from the localized
+          /service-areas/:locationId/:serviceId combo pages below, which stay
+          in place — these are the generic, city-agnostic versions). */}
+      <Route path="/2-pro-guard-installation" element={<ServiceDetail slug="2-0-pro-installation" />} />
+      <Route path="/gutter-cleaning" element={<ServiceDetail slug="gutter-cleaning" />} />
+      <Route path="/repair-tune-up" element={<ServiceDetail slug="repair-tune-up" />} />
+      <Route path="/2-0-pro-heat" element={<ServiceDetail slug="2-0-pro-heat" />} />
+      <Route path="/commercial-protection" element={<ServiceDetail slug="commercial" />} />
+      <Route path="/warranty" element={<Warranty />} />
+      <Route path="/why-2-pro" element={<Why2Pro />} />
+      <Route path="/booking" element={<Booking />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/seamless-gutter" element={<SeamlessGutter />} />
+      <Route path="/2-pro-vs-leaf-filter" element={<LeafFilterVs />} />
+      <Route path="/2-pro-vs-leaf-guard" element={<LeafGuardVs />} />
+
+      {/* Aliases for alternative/shorthand paths */}
+      <Route path="/about" element={<Navigate to="/about-us" replace />} />
+      <Route path="/services" element={<Navigate to="/services-hub" replace />} />
+      <Route path="/vs-leaffilter" element={<Navigate to="/2-pro-vs-leaf-filter" replace />} />
+      <Route path="/vs-leafguard" element={<Navigate to="/2-pro-vs-leaf-guard" replace />} />
+
+      <Route path="*" element={<TrailingSlashOrNotFound />} />
+    </Routes>
+  );
+
   return (
     <>
       <ScrollToTop />
+      <ScrollProgressBar />
       <FloatingNav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services-hub" element={<ServicesHub />} />
-        <Route path="/service-areas" element={<ServiceAreas />} />
-        <Route path="/service-areas/:locationId" element={<LocationDetail />} />
-        <Route path="/service-areas/:locationId/:serviceId" element={<LocationDetail />} />
-        <Route path="/services/:serviceId" element={<ServiceDetail />} />
-        <Route path="/warranty" element={<Warranty />} />
-        <Route path="/why-2-pro" element={<Why2Pro />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/seamless-gutter" element={<SeamlessGutter />} />
-        <Route path="/2-pro-vs-leaf-filter" element={<LeafFilterVs />} />
-        <Route path="/2-pro-vs-leaf-guard" element={<LeafGuardVs />} />
-
-        {/* Aliases for alternative/shorthand paths */}
-        <Route path="/about" element={<Navigate to="/about-us" replace />} />
-        <Route path="/services" element={<Navigate to="/services-hub" replace />} />
-        <Route path="/vs-leaffilter" element={<Navigate to="/2-pro-vs-leaf-filter" replace />} />
-        <Route path="/vs-leafguard" element={<Navigate to="/2-pro-vs-leaf-guard" replace />} />
-
-        <Route path="*" element={<TrailingSlashOrNotFound />} />
-      </Routes>
+      {shouldReduceMotion ? (
+        page
+      ) : (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.22, ease: "easeInOut" }}
+          >
+            {page}
+          </motion.div>
+        </AnimatePresence>
+      )}
       <Footer />
     </>
   );

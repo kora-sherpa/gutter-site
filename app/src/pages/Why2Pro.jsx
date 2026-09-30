@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, CircleDot, AlignJustify, Wind, ShieldCheck, Flame, CreditCard, ArrowLeftRight, Phone } from "lucide-react";
+import VideoFeature from "../components/VideoFeature.jsx";
 
 const FEATURES = [
   {
@@ -63,6 +64,13 @@ export default function Why2Pro() {
           </div>
         </div>
       </section>
+
+      <VideoFeature
+        eyebrow="Real Proof"
+        title="Why 2.0 PRO® Is the Best Gutter Guard in America"
+        subtitle="Don't just take our word for it — see the patented Triple-Rib™ mesh and aircraft-grade frame tested side-by-side against the competition."
+        videoSrc="https://video.wixstatic.com/video/680062_9d57080883ba4c12bf289e46200e699b/720p/mp4/file.mp4"
+      />
 
       <section className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="mx-auto mb-14 max-w-xl text-center">

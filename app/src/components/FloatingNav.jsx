@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -16,17 +16,16 @@ import {
   Building2,
   MapPin,
   BarChart2,
-  Info,
   ClipboardCheck,
 } from "lucide-react";
 
 const SERVICES = [
-  { name: "2.0 PRO® Guard Installation", desc: "Patented Triple-Rib™ micro-mesh protection", href: "/service-detail", icon: Shield },
-  { name: "Gutter Cleaning", desc: "The last cleaning you'll ever need", href: "/service-areas/denver-co/gutter-cleaning", icon: Droplet },
-  { name: "Repair & Tune-Up", desc: "Hanger, pitch & sealant service", href: "/service-areas/denver-co/repair-tune-up", icon: Wrench },
+  { name: "2.0 PRO® Guard Installation", desc: "Patented Triple-Rib™ micro-mesh protection", href: "/2-pro-guard-installation", icon: Shield },
+  { name: "Gutter Cleaning", desc: "The last cleaning you'll ever need", href: "/gutter-cleaning", icon: Droplet },
+  { name: "Repair & Tune-Up", desc: "Hanger, pitch & sealant service", href: "/repair-tune-up", icon: Wrench },
   { name: "Seamless Gutters", desc: "Custom K-style, 30+ colors", href: "/seamless-gutter", icon: Sparkles },
-  { name: "2.0 PRO HEAT™", desc: "Integrated ice-melt for winter", href: "/service-areas/denver-co/2-0-pro-heat", icon: Flame },
-  { name: "Commercial Protection", desc: "Multi-unit & commercial roof lines", href: "/service-areas/denver-co/commercial", icon: Building2 },
+  { name: "2.0 PRO HEAT™", desc: "Integrated ice-melt for winter", href: "/2-0-pro-heat", icon: Flame },
+  { name: "Commercial Protection", desc: "Multi-unit & commercial roof lines", href: "/commercial-protection", icon: Building2 },
 ];
 
 const SERVICE_AREAS = [
@@ -42,7 +41,6 @@ const COMPARE = [
 
 const RESOURCES = [
   { name: "Warranty", href: "/warranty", icon: ShieldCheck },
-  { name: "About", href: "/about-us", icon: Info },
   { name: "Register Warranty", href: "/warranty#register", icon: ClipboardCheck },
 ];
 
@@ -137,6 +135,16 @@ function MobileAccordion({ title, items, open, onToggle }) {
 export default function FloatingNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openAccordion, setOpenAccordion] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   function toggleAccordion(key) {
     setOpenAccordion((current) => (current === key ? null : key));
@@ -148,10 +156,18 @@ export default function FloatingNav() {
   }
 
   return (
-    <header className="fixed left-4 right-4 top-4 z-50 mx-auto max-w-[1280px] rounded-pill border border-pale-sage bg-white py-4 px-6 shadow-lg md:px-8 sm:left-2.5 sm:right-2.5 sm:top-2.5">
+    <header
+      className={`fixed left-4 right-4 top-4 z-50 mx-auto max-w-[1280px] rounded-pill border border-pale-sage bg-white px-6 shadow-lg transition-[padding,box-shadow] duration-300 md:px-8 sm:left-2.5 sm:right-2.5 sm:top-2.5 ${
+        scrolled ? "py-2.5 shadow-xl" : "py-4"
+      }`}
+    >
       <div className="flex items-center justify-between gap-3">
         <Link to="/" aria-label="Gutter Guard Experts home" onClick={closeMobileMenu}>
-          <img src="/assets/logo.png" alt="Gutter Guard Experts Logo" className="h-12 w-auto md:h-14" />
+          <img
+            src="/assets/logo.png"
+            alt="Gutter Guard Experts Logo"
+            className={`w-auto transition-[height] duration-300 ${scrolled ? "h-10 md:h-11" : "h-12 md:h-14"}`}
+          />
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
@@ -167,8 +183,12 @@ export default function FloatingNav() {
             ))}
           </DesktopDropdown>
 
-          <Link to="/gallery" className="whitespace-nowrap rounded-pill px-2.5 py-2 text-sm font-semibold text-ink transition hover:bg-ink/5">
+          <Link to="/gallery" className="link-underline whitespace-nowrap rounded-pill px-2.5 py-2 text-sm font-semibold text-ink transition hover:bg-ink/5">
             Gallery
+          </Link>
+
+          <Link to="/about-us" className="link-underline whitespace-nowrap rounded-pill px-2.5 py-2 text-sm font-semibold text-ink transition hover:bg-ink/5">
+            About
           </Link>
 
           <DesktopDropdown label="Compare">
@@ -191,7 +211,7 @@ export default function FloatingNav() {
           </a>
           <Link
             to="/booking"
-            className="rounded-pill bg-orange px-[22px] py-[11px] text-[14px] font-bold text-white shadow-[0_8px_20px_rgba(242,101,34,0.32)] transition hover:-translate-y-0.5 hover:bg-orange-dark"
+            className="btn-shimmer rounded-pill bg-orange px-[22px] py-[11px] text-[14px] font-bold text-white shadow-[0_8px_20px_rgba(242,101,34,0.32)] transition duration-200 hover:-translate-y-0.5 hover:bg-orange-dark active:scale-[0.97]"
           >
             Get an Estimate
           </Link>
@@ -223,6 +243,9 @@ export default function FloatingNav() {
               <Link to="/gallery" onClick={closeMobileMenu} className="border-b border-border px-2 py-3.5 text-[16px] font-bold text-ink">
                 Gallery
               </Link>
+              <Link to="/about-us" onClick={closeMobileMenu} className="border-b border-border px-2 py-3.5 text-[16px] font-bold text-ink">
+                About
+              </Link>
               <MobileAccordion title="Compare" items={COMPARE} open={openAccordion === "compare"} onToggle={() => toggleAccordion("compare")} />
               <MobileAccordion title="Resources" items={RESOURCES} open={openAccordion === "resources"} onToggle={() => toggleAccordion("resources")} />
 
@@ -233,7 +256,7 @@ export default function FloatingNav() {
               <Link
                 to="/booking"
                 onClick={closeMobileMenu}
-                className="mt-1 rounded-pill bg-orange px-6 py-3.5 text-center text-[15px] font-bold text-white shadow-[0_8px_20px_rgba(242,101,34,0.32)]"
+                className="btn-shimmer mt-1 rounded-pill bg-orange px-6 py-3.5 text-center text-[15px] font-bold text-white shadow-[0_8px_20px_rgba(242,101,34,0.32)] transition active:scale-[0.97]"
               >
                 Get an Estimate
               </Link>

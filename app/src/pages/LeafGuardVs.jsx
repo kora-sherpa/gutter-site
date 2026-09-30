@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { X, Check, Phone } from "lucide-react";
+import VideoFeature from "../components/VideoFeature.jsx";
 
 const PROBLEMS = [
   { title: "Large opening for debris", desc: "smaller leaves and grit can still get inside and clog the system." },
@@ -77,6 +78,13 @@ export default function LeafGuardVs() {
           </table>
         </div>
       </section>
+
+      <VideoFeature
+        eyebrow="Head-to-Head Review"
+        title="2.0 PRO® Gutter Guard vs. LeafGuard — See the Difference"
+        subtitle="Watch a real side-by-side comparison of the reverse-curve hood design against our patented Triple-Rib™ micro-mesh system."
+        videoSrc="https://video.wixstatic.com/video/680062_1e722b501a7746ff9809c697fed60/720p/mp4/file.mp4"
+      />
 
       <section className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">

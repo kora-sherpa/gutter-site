@@ -37,9 +37,9 @@ function FaqItem({ q, a, open, onToggle }) {
   );
 }
 
-export default function ServiceDetail() {
+export default function ServiceDetail({ slug }) {
   const { serviceId } = useParams();
-  const service = services.find((s) => s.slug === serviceId);
+  const service = services.find((s) => s.slug === (slug || serviceId));
   const [openFaq, setOpenFaq] = useState(0);
 
   if (!service) {

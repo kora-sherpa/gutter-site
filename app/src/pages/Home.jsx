@@ -25,6 +25,9 @@ import {
   Snowflake,
 } from "lucide-react";
 import HeroCarousel from "../components/HeroCarousel.jsx";
+import VideoFeature from "../components/VideoFeature.jsx";
+import CommonProblemsGrid from "../components/CommonProblemsGrid.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 const TECH_FEATURES = [
   {
@@ -197,8 +200,15 @@ export default function Home() {
     <main>
       <HeroCarousel />
 
+      <VideoFeature
+        eyebrow="Welcome to Gutter Guard Experts"
+        title="See Why 10,000+ Homeowners Trust 2.0 PRO®"
+        subtitle="A quick look at who we are, how our patented system works, and why we back every install with a Triple-Lifetime Warranty — straight from our team."
+        videoSrc="https://video.wixstatic.com/video/680062_4dc9619dcf924bd4a900d215ff792c98/1080p/mp4/file.mp4"
+      />
+
       {/* ============ 1. WHY 2.0 PRO TECHNOLOGY WINS ============ */}
-      <section className="mx-auto max-w-[1280px] px-6 py-20">
+      <Reveal as="section" className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="mx-auto mb-10 max-w-xl text-center">
           <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
             The Engineering
@@ -216,21 +226,23 @@ export default function Home() {
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {TECH_FEATURES.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-border bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-orange/10 text-orange">
-                <Icon className="h-[22px] w-[22px]" />
+        <div className="group/grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {TECH_FEATURES.map(({ icon: Icon, title, desc }, i) => (
+            <Reveal key={title} delay={i * 0.08}>
+              <div className="group h-full rounded-2xl border border-border bg-white p-6 opacity-100 transition hover:-translate-y-1 hover:!opacity-100 hover:shadow-lg group-hover/grid:opacity-60">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-orange/10 text-orange transition duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Icon className="h-[22px] w-[22px]" />
+                </div>
+                <h3 className="mb-2 text-[17px] font-bold">{title}</h3>
+                <p className="text-[14px] leading-relaxed text-muted">{desc}</p>
               </div>
-              <h3 className="mb-2 text-[17px] font-bold">{title}</h3>
-              <p className="text-[14px] leading-relaxed text-muted">{desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
-      </section>
+      </Reveal>
 
       {/* ============ 2. COMPARISON MATRIX ============ */}
-      <section className="bg-surface py-20">
+      <Reveal as="section" className="bg-surface py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="mx-auto mb-10 max-w-xl text-center">
             <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
@@ -256,7 +268,7 @@ export default function Home() {
               </thead>
               <tbody>
                 {COMPARISON_ROWS.map((row) => (
-                  <tr key={row.feature} className="border-t border-border hover:bg-surface/60">
+                  <tr key={row.feature} className="border-t border-border transition-colors hover:bg-surface/60">
                     <td className="px-5 py-4 align-top text-[14.5px] font-bold text-navy">{row.feature}</td>
                     <td className="bg-[#fff7f2] px-5 py-4 align-top text-[13.5px] text-[#2b2f36]">
                       <div className="flex items-start gap-2">
@@ -275,48 +287,51 @@ export default function Home() {
             </table>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ============ 3. SERVICE DIVISION GRID ============ */}
-      <section className="mx-auto max-w-[1280px] px-6 py-20">
+      <Reveal as="section" className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="mx-auto mb-10 max-w-xl text-center">
           <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
             What We Do
           </div>
           <h2 className="text-[28px] font-bold sm:text-[36px]">Every Gutter Service, Under One Roof</h2>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map(({ slug, name, desc, icon: Icon }) => (
-            <Link
-              key={slug}
-              to={`/service-areas/denver-co/${slug}`}
-              className="rounded-2xl border border-border bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-navy/7 text-navy">
-                <Icon className="h-6 w-6" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold">{name}</h3>
-              <p className="text-[14.5px] leading-relaxed text-muted">{desc}</p>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-orange-dark">
-                Learn more <ArrowRight className="h-3.5 w-3.5" />
-              </span>
-            </Link>
+        <div className="group/grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map(({ slug, name, desc, icon: Icon }, i) => (
+            <Reveal key={slug} delay={i * 0.06}>
+              <Link
+                to={`/service-areas/denver-co/${slug}`}
+                className="group block h-full rounded-2xl border border-border bg-white p-7 opacity-100 transition hover:-translate-y-1 hover:!opacity-100 hover:shadow-lg group-hover/grid:opacity-60"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-navy/7 text-navy transition duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-lg font-bold">{name}</h3>
+                <p className="text-[14.5px] leading-relaxed text-muted">{desc}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-orange-dark">
+                  Learn more <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </Reveal>
           ))}
         </div>
-      </section>
+      </Reveal>
 
       {/* ============ 4. WARRANTY STORY ============ */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "4 / 5" }}>
-              <img
-                src="/assets/eebfe3ea32d811c69e6187528eb5905a.jpg"
-                alt="A family enjoying dinner in their backyard at dusk, protected gutters visible along the roofline"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div>
+            <Reveal direction="left">
+              <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "4 / 5" }}>
+                <img
+                  src="/assets/eebfe3ea32d811c69e6187528eb5905a.jpg"
+                  alt="A family enjoying dinner in their backyard at dusk, protected gutters visible along the roofline"
+                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                />
+              </div>
+            </Reveal>
+            <Reveal direction="right" delay={0.1}>
               <div className="mb-3 text-sm font-bold uppercase tracking-wide text-orange-dark">Backed for Life</div>
               <h2 className="mb-4 text-[28px] font-bold sm:text-[36px]">The Triple-Lifetime Warranty Story</h2>
               <p className="text-lg text-muted">
@@ -343,16 +358,16 @@ export default function Home() {
                   homeowner if you sell — and none of it voids your existing roof warranty.
                 </p>
               </div>
-              <Link to="/warranty" className="mt-7 inline-flex items-center gap-2 rounded-pill bg-navy px-8 py-4 font-bold text-white">
-                View Full Warranty Terms <ArrowRight className="h-4 w-4" />
+              <Link to="/warranty" className="btn-shimmer group mt-7 inline-flex items-center gap-2 rounded-pill bg-navy px-8 py-4 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.97]">
+                View Full Warranty Terms <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* ============ 5. 3-STEP PROCESS ============ */}
-      <section className="mx-auto max-w-[1280px] px-6 py-20">
+      <Reveal as="section" className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="mx-auto mb-14 max-w-xl text-center">
           <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
             How It Works
@@ -363,19 +378,21 @@ export default function Home() {
         <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div className="pointer-events-none absolute inset-x-[12%] top-[27px] hidden border-t-2 border-dashed border-border sm:block" />
           {PROCESS_STEPS.map((step, i) => (
-            <div key={step.num} className="relative z-10 px-3 text-center">
-              <div className={`mx-auto mb-5 flex h-[60px] w-[60px] items-center justify-center rounded-full border-[5px] border-white font-display text-lg font-bold text-white shadow-[0_0_0_2px_#E2E8F0] ${i === 2 ? "bg-orange" : "bg-navy"}`}>
+            <Reveal key={step.num} delay={i * 0.12} className="relative z-10 px-3 text-center">
+              <div className={`mx-auto mb-5 flex h-[60px] w-[60px] items-center justify-center rounded-full border-[5px] border-white font-display text-lg font-bold text-white shadow-[0_0_0_2px_#E2E8F0] transition-transform duration-300 hover:scale-110 ${i === 2 ? "bg-orange" : "bg-navy"}`}>
                 {step.num}
               </div>
               <h3 className="mb-2 text-lg font-bold">{step.title}</h3>
               <p className="text-[14.5px] text-muted">{step.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
-      </section>
+      </Reveal>
+
+      <CommonProblemsGrid />
 
       {/* ============ 6. WARNING SIGNS + CONVERSION BOX ============ */}
-      <section className="bg-surface py-20">
+      <Reveal as="section" className="bg-surface py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
@@ -383,8 +400,8 @@ export default function Home() {
               <h2 className="mb-6 text-[28px] font-bold sm:text-[36px]">7 Warning Signs Your Gutters Need Attention</h2>
               <div className="flex flex-col">
                 {WARNING_SIGNS.map((w) => (
-                  <div key={w.title} className="flex items-start gap-3.5 border-b border-border py-4 last:border-b-0">
-                    <div className="flex h-[34px] w-[34px] flex-shrink-0 items-center justify-center rounded-[10px] bg-orange/10 text-orange-dark">
+                  <div key={w.title} className="group flex items-start gap-3.5 border-b border-border py-4 last:border-b-0">
+                    <div className="flex h-[34px] w-[34px] flex-shrink-0 items-center justify-center rounded-[10px] bg-orange/10 text-orange-dark transition-transform duration-300 group-hover:scale-110">
                       <AlertTriangle className="h-[18px] w-[18px]" />
                     </div>
                     <div>
@@ -409,19 +426,19 @@ export default function Home() {
                 Every warning sign above gets more expensive the longer it sits. Get a free, no-obligation estimate
                 today and see exactly what it'll take to make gutter problems a thing of the past.
               </p>
-              <Link to="/booking" className="mb-3 block rounded-pill bg-orange py-3.5 text-center font-bold text-white">
+              <Link to="/booking" className="btn-shimmer mb-3 block rounded-pill bg-orange py-3.5 text-center font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.97]">
                 Get My Free Estimate
               </Link>
-              <a href="tel:+17207091681" className="flex items-center justify-center gap-2 rounded-pill border border-white/28 py-3.5 font-bold text-white">
+              <a href="tel:+17207091681" className="flex items-center justify-center gap-2 rounded-pill border border-white/28 py-3.5 font-bold text-white transition hover:bg-white/10">
                 <Phone className="h-4 w-4" /> Call (720) 709-1681
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ============ 7. FAQ ============ */}
-      <section className="mx-auto max-w-[1280px] px-6 py-20">
+      <Reveal as="section" className="mx-auto max-w-[1280px] px-6 py-20">
         <div className="mx-auto mb-10 max-w-xl text-center">
           <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
             Questions, Answered
@@ -433,10 +450,10 @@ export default function Home() {
             <FaqItem key={f.q} q={f.q} a={f.a} open={openFaq === i} onToggle={() => setOpenFaq((cur) => (cur === i ? -1 : i))} />
           ))}
         </div>
-      </section>
+      </Reveal>
 
       {/* ============ 8. REGIONAL SERVICE AREAS ============ */}
-      <section className="bg-surface py-20">
+      <Reveal as="section" className="bg-surface py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="mx-auto mb-10 max-w-xl text-center">
             <div className="mb-3 inline-flex rounded-pill border border-orange/30 bg-orange/10 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wide text-orange-dark">
@@ -449,25 +466,26 @@ export default function Home() {
               <Link
                 key={a.name}
                 to={a.href}
-                className="flex items-center justify-center gap-2 rounded-2xl border border-border bg-white px-3 py-4 text-center text-[14.5px] font-bold text-navy transition hover:-translate-y-1 hover:border-orange hover:bg-[#fff7f2] hover:text-orange-dark"
+                className="group flex items-center justify-center gap-2 rounded-2xl border border-border bg-white px-3 py-4 text-center text-[14.5px] font-bold text-navy transition hover:-translate-y-1 hover:border-orange hover:bg-[#fff7f2] hover:text-orange-dark"
               >
-                <MapPin className="h-[15px] w-[15px] flex-shrink-0 text-orange" />
+                <MapPin className="h-[15px] w-[15px] flex-shrink-0 text-orange transition-transform duration-300 group-hover:-translate-y-0.5" />
                 {a.name}
               </Link>
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/service-areas" className="inline-flex items-center gap-1.5 text-[14.5px] font-bold text-orange-dark">
-              View all service areas <ArrowRight className="h-3.5 w-3.5" />
+            <Link to="/service-areas" className="group inline-flex items-center gap-1.5 text-[14.5px] font-bold text-orange-dark">
+              View all service areas <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ============ 9. CTA BANNER ============ */}
-      <section className="mx-auto max-w-[1280px] px-6 py-20">
-        <div className="rounded-[32px] bg-gradient-to-br from-navy to-[#152230] p-10 sm:p-14">
-          <div className="flex flex-wrap items-center justify-between gap-10">
+      <Reveal as="section" className="mx-auto max-w-[1280px] px-6 py-20">
+        <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-navy to-[#152230] p-10 sm:p-14">
+          <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-orange/10 blur-[80px] animate-float-slow" />
+          <div className="relative flex flex-wrap items-center justify-between gap-10">
             <div className="max-w-[560px]">
               <div className="mb-5 flex flex-wrap gap-2.5">
                 <span className="flex items-center gap-2 rounded-xl border border-cyan/30 bg-cyan/10 px-3.5 py-2 text-[13px] font-bold text-[#dff0fb]">
@@ -484,17 +502,17 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-3.5">
-              <Link to="/booking" className="rounded-pill bg-orange px-8 py-4 font-bold text-white">
+              <Link to="/booking" className="btn-shimmer rounded-pill bg-orange px-8 py-4 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.97]">
                 Get an Estimate
               </Link>
-              <a href="tel:+17207091681" className="flex items-center gap-3 font-display text-[26px] font-bold text-white">
-                <Phone className="h-6 w-6 text-orange" />
+              <a href="tel:+17207091681" className="group flex items-center gap-3 font-display text-[26px] font-bold text-white">
+                <Phone className="h-6 w-6 text-orange transition-transform duration-300 group-hover:rotate-12" />
                 (720) 709-1681
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
     </main>
   );
 }

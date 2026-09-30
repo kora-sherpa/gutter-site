@@ -9,7 +9,7 @@ const COMPANY_LINKS = [
 
 const SERVICE_LINKS = [
   { name: "All Services", href: "/services-hub" },
-  { name: "2.0 PRO® Installation", href: "/service-detail" },
+  { name: "2.0 PRO® Installation", href: "/2-pro-guard-installation" },
   { name: "Seamless Gutters", href: "/seamless-gutter" },
 ];
 
@@ -33,7 +33,7 @@ function FooterColumn({ title, links }) {
       <ul className="flex flex-col gap-[11px]">
         {links.map((link) => (
           <li key={link.href}>
-            <Link to={link.href} className="text-[14px] text-white/75 transition hover:text-white">
+            <Link to={link.href} className="link-underline text-[14px] text-white/75 transition hover:text-white">
               {link.name}
             </Link>
           </li>
@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1280px] px-6 pb-12 pt-[72px]">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-10">
           <div>
-            <img src="/assets/logo.png" alt="Gutter Guard Experts Logo" className="mb-4 h-[26px] w-auto" />
+            <img src="/assets/gutter-guard-logo-light.avif" alt="Gutter Guard Experts Logo" className="mb-4 h-[26px] w-auto" />
             <p className="max-w-[280px] text-sm leading-relaxed text-white/55">
               Family-owned since 2012. Patented 2.0 PRO® gutter protection, installed and warrantied for life.
             </p>
@@ -89,10 +89,10 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-3 border-t border-white/10 px-6 py-[22px] text-[13px] text-white/50">
         <span>© {year} Gutter Guard Experts®. All rights reserved.</span>
         <div className="flex gap-5">
-          <Link to="/privacy-policy" className="text-white/60 hover:text-white">
+          <Link to="/privacy-policy" className="link-underline text-white/60 transition hover:text-white">
             Privacy Policy
           </Link>
-          <Link to="/terms-and-conditions" className="text-white/60 hover:text-white">
+          <Link to="/terms-and-conditions" className="link-underline text-white/60 transition hover:text-white">
             Terms &amp; Conditions
           </Link>
         </div>

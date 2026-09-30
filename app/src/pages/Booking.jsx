@@ -12,7 +12,21 @@ import {
   Building2,
   CreditCard,
   PartyPopper,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
+
+// GoHighLevel inbound webhook. VITE_-prefixed vars are inlined into the client
+// bundle at build time, so this is visible in the browser same as any other
+// client-side fetch target — expected for a write-only lead-capture endpoint.
+const GHL_WEBHOOK_URL = import.meta.env.VITE_GHL_WEBHOOK_URL;
+
+if (import.meta.env.DEV && !GHL_WEBHOOK_URL) {
+  // eslint-disable-next-line no-console
+  console.warn(
+    "[Booking] VITE_GHL_WEBHOOK_URL is not set. Lead submissions will fail until it's added to app/.env.local (see app/.env.example)."
+  );
+}
 
 const SERVICES = [
   { id: "install", name: "2.0 PRO® Installation", icon: Shield },
@@ -76,6 +90,8 @@ const inputClassName =
 export default function Booking() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [service, setService] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [form, setForm] = useState({
@@ -99,10 +115,64 @@ export default function Booking() {
   const canContinueStep1 = Boolean(service);
   const canSubmit = form.name && form.phone && form.email && form.consentContact && form.consentTerms;
 
-  function handleSubmit(e) {
+  async function postLead(url, payload) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (res.status !== 200 && res.status !== 201) {
+      throw new Error(`Lead submission failed with status ${res.status}`);
+    }
+    return res;
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (!canSubmit) return;
-    setSubmitted(true);
+    if (!canSubmit || submitting) return;
+
+    setSubmitting(true);
+    setSubmitError("");
+
+    const [firstName, ...rest] = form.name.trim().split(/\s+/);
+    const selectedService = SERVICES.find((s) => s.id === service);
+
+    const payload = {
+      full_name: form.name,
+      first_name: firstName || "",
+      last_name: rest.join(" "),
+      email: form.email,
+      phone: form.phone,
+      address1: form.address,
+      city: form.city,
+      state: form.state,
+      postal_code: form.zip,
+      service_requested: selectedService ? selectedService.name : service,
+      property_type: propertyType,
+      urgency: form.urgency,
+      notes: form.notes,
+    };
+
+    try {
+      if (!GHL_WEBHOOK_URL) throw new Error("VITE_GHL_WEBHOOK_URL is not configured");
+      await postLead(GHL_WEBHOOK_URL, payload);
+      setSubmitted(true);
+    } catch (directError) {
+      // Most likely cause here is the browser blocking a cross-origin request to
+      // GHL (no CORS headers on their end) rather than a real failure — retry
+      // through our own same-origin Vercel function, which forwards it
+      // server-to-server instead. See app/api/submit-lead.js.
+      try {
+        await postLead("/api/submit-lead", payload);
+        setSubmitted(true);
+      } catch (proxyError) {
+        setSubmitError(
+          "We couldn't submit your estimate request. Please call us directly at (720) 709-1681, or try again in a moment."
+        );
+      }
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const direction = 1;
@@ -297,16 +367,29 @@ export default function Booking() {
                 </label>
               </div>
 
+              {submitError && (
+                <div className="mt-5 flex items-start gap-2.5 rounded-xl border border-red-200 bg-red-50 p-4 text-[13.5px] text-red-700">
+                  <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <span>{submitError}</span>
+                </div>
+              )}
+
               <div className="mt-7 flex gap-3">
-                <button type="button" onClick={() => setStep(2)} className="rounded-pill border border-border px-6 py-3.5 text-[14px] font-bold text-navy">
+                <button type="button" onClick={() => setStep(2)} disabled={submitting} className="rounded-pill border border-border px-6 py-3.5 text-[14px] font-bold text-navy disabled:cursor-not-allowed disabled:opacity-40">
                   Back
                 </button>
                 <button
                   type="submit"
-                  disabled={!canSubmit}
-                  className="flex-1 rounded-pill bg-orange py-3.5 text-[14px] font-bold text-white transition disabled:cursor-not-allowed disabled:opacity-40"
+                  disabled={!canSubmit || submitting}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-pill bg-orange py-3.5 text-[14px] font-bold text-white transition disabled:cursor-not-allowed disabled:opacity-40"
                 >
-                  Get My Free Estimate
+                  {submitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" /> Submitting...
+                    </>
+                  ) : (
+                    "Get My Free Estimate"
+                  )}
                 </button>
               </div>
             </motion.form>
